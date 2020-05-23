@@ -41,6 +41,7 @@ echo "
 <body>
 	<param name=\"condition\" value=\"$condition\">
 	<param name=\"ins_data\" value=\"$ins_dat\">
+	<span class=\"dot\"></span>
 	<div id=\"container\">
 		<div id=\"next-btn\">Next!</div>
 		<div id=\"insurance\">

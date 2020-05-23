@@ -63,20 +63,31 @@ var currentBerries = []; // current berries that have been fired
 var gridObjs = []; // the grid objects that stand in for waffles for simulation
 var hitGridObjects = []; // coordinates for grid objects (waffle stand ins) that were hit during simulation
 
+var eyeAvg = {
+	x: 0,
+	y: 0
+}
+var eyeIdx = 0;
+
 // Insurance data
 var insDatFull = [];
 
-/*
-webgazer.setGazeListener(function(data, elapsedTime) {
-    if (data == null) {
-        return;
-    }
-    var xprediction = data.x; //these x coordinates are relative to the viewport
-    var yprediction = data.y; //these y coordinates are relative to the viewport
-    console.log(elapsedTime); //elapsed time is based on time since begin was called
-		console.log(xprediction, yprediction);
-}).begin();
-*/
+$(document).ready(() => {
+	webgazer.setRegression("linear");
+	webgazer.setGazeListener(function(data, elapsedTime) {
+		$("#webgazerGazeDot").css({"display" : ""});
+
+			if (data == null) {
+				console.log(":(");
+				return;
+			}
+			var xprediction = data.x; //these x coordinates are relative to the viewport
+			var yprediction = data.y; //these y coordinates are relative to the viewport
+			console.log(elapsedTime, xprediction, yprediction);
+	}).begin();
+
+	});
+
 
 // Create Matter world
 function initialize()
@@ -84,6 +95,8 @@ function initialize()
 	// Get the condition state from the param
 	var conditionParam = parseInt($("param[name='condition']").attr("value"));
 	var insDat = $("param[name='ins_data']").attr("value");
+
+
 
 	/**
 	 * If it reads 0 from the condition file, then it will set

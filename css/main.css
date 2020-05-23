@@ -109,3 +109,15 @@ img.loading
 	font-family: unmaskedBB;
 	src: url(../fonts/unmasked-bb.regular.ttf);
 }
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  position:absolute;
+  left: 0px;
+  top: 0px;
+	z-index: 100;
+}
