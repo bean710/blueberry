@@ -501,9 +501,7 @@ function setupLevel()
 	$("#buy_ins").show();
 	$("#ins_price").text("" + insDatFull[levelNumber].price);
 	$("#dis_chance").text((insDatFull[levelNumber].prob * 100) + "%");
-
-	$("#level_num").text("" + (levelNumber + 1));
-	$("#level_tot").text("" + insDatFull.length);
+	$("#pot_loss").text(insDatFull[levelNumber].losses);
 
 	spawnBars();
 	spawnObjects();

@@ -15,8 +15,6 @@ echo
 
 	<!-- JavaScript imports -->
 	<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js\"></script> <!-- Import jQuery from Google CDN -->
-	/* WebGazer.js library */
-	<script src=\"js/webgazer.js\" type=\"text/javascript\"></script>
 	<script src=\"js/main.js\"></script>
 	<script src=\"js/matter.min.js\"></script>
 	<!-- End JavaScript imports -->
@@ -41,7 +39,6 @@ echo "
 <body>
 	<param name=\"condition\" value=\"$condition\">
 	<param name=\"ins_data\" value=\"$ins_dat\">
-	<span class=\"dot\"></span>
 	<div id=\"container\">
 		<div id=\"next-btn\">Next!</div>
 		<div id=\"insurance\">
@@ -49,10 +46,10 @@ echo "
 			<div id=\"ins_info\">
 				Price: <span id=\"ins_price\"></span><br>
 				Chance of Disaster: <span id=\"dis_chance\"></span>
+				Potential Loss: <span id=\"pot_loss\"></span>
 			</div>
 			<div id=\"buy_ins\">Buy</div>
 		</div>
-		<div id=\"level_nums\">Level <span id=\"level_num\"></span>/<span id=\"level_tot\"></span></div>
 		<img src=\"img/bload.gif\" class=\"loading\">
 		<img id=\"practice\" src=\"img/practice.gif\" class=\"message\">
 		<img id=\"game\" src=\"img/game.gif\" class=\"message\">
