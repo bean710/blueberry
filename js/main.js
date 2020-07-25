@@ -79,6 +79,7 @@ function initialize()
 	var conditionParam = parseInt($("param[name='condition']").attr("value"));
 	var insDat = $("param[name='ins_data']").attr("value");
 
+	$("#ins_bought").hide();
 
 
 	/**
@@ -371,6 +372,7 @@ function initialize()
 		//console.log("Clicked!");
 		if (!runningSimulation) {
 			$("#buy_ins").hide();
+			$("#ins_bought").show();
 			levelBoughtIns = true;
 		}
 	})

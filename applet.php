@@ -49,6 +49,7 @@ echo "
 				Potential Loss: <span id=\"pot_loss\"></span>
 			</div>
 			<div id=\"buy_ins\">Buy</div>
+			<div id=\"ins_bought\">Insurance Bought</div>
 		</div>
 		<img src=\"img/bload.gif\" class=\"loading\">
 		<img id=\"practice\" src=\"img/practice.gif\" class=\"message\">
