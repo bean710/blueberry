@@ -72,23 +72,6 @@ var eyeIdx = 0;
 // Insurance data
 var insDatFull = [];
 
-$(document).ready(() => {
-	webgazer.setRegression("linear");
-	webgazer.setGazeListener(function(data, elapsedTime) {
-		$("#webgazerGazeDot").css({"display" : ""});
-
-			if (data == null) {
-				console.log(":(");
-				return;
-			}
-			var xprediction = data.x; //these x coordinates are relative to the viewport
-			var yprediction = data.y; //these y coordinates are relative to the viewport
-			console.log(elapsedTime, xprediction, yprediction);
-	}).begin();
-
-	});
-
-
 // Create Matter world
 function initialize()
 {
