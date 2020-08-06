@@ -34,7 +34,7 @@ function init ($numconds) {
 	fwrite($fh,$strresults);
 	fclose($fh);
 
-	if ($num == 0 || $num == 2) {
+	if ($num == 0 || $num == 3) {
 		$insdat = file_get_contents("./results/poordat.csv");
 	}
 	else {

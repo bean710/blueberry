@@ -133,7 +133,7 @@ function initialize()
 			"losses": dats[3],
 			"ev": dats[4],
 			"reasonable": dats[5],
-			"drought": dats[6]
+			"drought": parseInt(dats[6])
 		});
 	}
 
@@ -376,6 +376,7 @@ function initialize()
 			$("#buy_ins").hide();
 			$("#ins_bought").show();
 			levelBoughtIns = true;
+			levelBerries += insDatFull[levelNumber].price;
 		}
 	})
 }
@@ -396,6 +397,7 @@ function loadSlingBlueberry(isSimulation)
 		{
 			traceTimes[currentBlueberry.id] = new Date();
 			tracePoints[currentBlueberry.id] = 0;
+			$("#insurance").hide();
 		}
 	}
 }
@@ -480,6 +482,17 @@ function nextLevel()
 	}
 	else
 	{
+		if (levelNumber > 3 && insDatFull[levelNumber].drought)
+		{
+			if (levelBoughtIns)
+			{
+				alert("There was a drought, but since you bought insurance, your points are protected.");
+			}
+			else {
+				alert(`There's been a drought! You will lose ${insDatFull[levelNumber].losses} points.`);
+				totalPoints -= insDatFull[levelNumber].losses;
+			}
+		}
 		levelNumber++;
 		loadLevelScores();
 		setupLevel();
@@ -726,7 +739,8 @@ function spawnObjects()
 		runningSimulation = false; // indicate we're done with runningSimulation = false
 
 		$(".message, .loading").hide(); // and hiding loading
-		$("#insurance").show();
+		if (!practicing)
+			$("#insurance").show();
 	}
 
 	// The main function execution
