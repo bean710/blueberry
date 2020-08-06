@@ -72,11 +72,13 @@ var eyeIdx = 0;
 // Insurance data
 var insDatFull = [];
 
+var conditionParam = 0;
+
 // Create Matter world
 function initialize()
 {
 	// Get the condition state from the param
-	var conditionParam = parseInt($("param[name='condition']").attr("value"));
+	conditionParam = parseInt($("param[name='condition']").attr("value"));
 	var insDat = $("param[name='ins_data']").attr("value");
 
 	$("#ins_bought").hide();
@@ -111,13 +113,13 @@ function initialize()
 	{
 		berriesPerLevel = 3;
 		initialBankBerries = 30;
-		berryBankPenalty = 2;
+		berryBankPenalty = -1;
 	}
 	else if(conditionParam == 3)
 	{
 		berriesPerLevel = 15;
 		initialBankBerries = 150;
-		berryBankPenalty = 2;
+		berryBankPenalty = -1;
 	}
 
 	bankBerries = initialBankBerries;
@@ -252,7 +254,7 @@ function initialize()
 		// Draw main UI of status text
 		ctx.font = '22px unmaskedBB';
 		ctx.fillStyle = "black";
-		ctx.fillText('Level Berries: '	+ levelBerries,10, 20);
+		ctx.fillText('Level Berries: '	+ (berriesPerLevel - levelBerries),10, 20);
 		ctx.fillText('Total Berries: '	+ bankBerries, 180, 20);
 		ctx.fillText('Level Points: '	+ levelPoints, 370, 20);
 		ctx.fillText('Total Points: '	+ totalPoints, 520, 20);
@@ -556,9 +558,24 @@ function outOfBlueberries()
 function endPractice()
 {
 	// Reset bank berries and score
-	bankBerries = initialBankBerries;
 	totalPoints = 0;
 
+	if (conditionParam == 2)
+	{
+		alert("INCOME SHOCK");
+		berriesPerLevel = 15;
+		initialBankBerries = 150;
+		berryBankPenalty = -1;
+	}
+	else if (conditionParam == 3)
+	{
+		alert("INCOME SHOCK");
+		berriesPerLevel = 3;
+		initialBankBerries = 30;
+		berryBankPenalty = -1;
+	}
+
+	bankBerries = initialBankBerries;
 	// levelNumber = 0; // reset level number
 
 	practicing = false; // disable practice mode
@@ -709,6 +726,7 @@ function spawnObjects()
 		runningSimulation = false; // indicate we're done with runningSimulation = false
 
 		$(".message, .loading").hide(); // and hiding loading
+		$("#insurance").show();
 	}
 
 	// The main function execution
@@ -717,6 +735,8 @@ function spawnObjects()
 	// Time to simulate
 	runningSimulation = true; // mark runningSimulatiojn
 	$(".loading").show(); // and show loading
+
+	$("#insurance").hide();
 
 	spawnGridBoxes();
 	simulateBerry();

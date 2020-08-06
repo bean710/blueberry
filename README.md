@@ -2,18 +2,18 @@ Conditions:
 ===
 Options for `cond.txt` (Changed automatically)
 ---
-- 1
+- 0
   - Poor
+  - No borrowing
+- 1
+  - Rich
   - No borrowing
 - 2
-  - Rich
-  - No borrowing
-- 3
   - Poor
-  - Borrowing allowed
-- 4
+  - Rich income shock after trials
+- 3
   - Rich
-  - Borrowing allowed
+  - Poor income shock after trials
 
 Options for `canborrow.txt` (Supersedes `cond.txt`):
 ---

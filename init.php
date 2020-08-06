@@ -8,9 +8,9 @@ function init ($numconds) {
 
 	// $numconds is the REAL number of conditions.
 
-	$numconds = $numconds - 1; 			// Don't change this.
+	//$numconds = $numconds - 1; 			// Don't change this.
 
-	$fh = fopen($subjFile,'r');			// process subject number (max 999)
+	$fh = fopen($subjFile,'r');			// process subject number (max 99999)
 	$subj = fread($fh,5);
 	fclose($fh);
 
@@ -26,7 +26,7 @@ function init ($numconds) {
 
 	$strresults = $num + 1;
 
-	if ($num == $numconds) {
+	if ($num > $numconds) {
 		$strresults = "0";
 	}
 
