@@ -37,6 +37,7 @@ var levelBerries = 0;
 var bankBerries = initialBankBerries; // displayed as "Total Berries"
 var levelPoints = 0;
 var totalPoints = 0;
+var pointsLost = 0; // Due to insurance
 
 var levelNumber = 0;
 var practicing = true;
@@ -377,6 +378,7 @@ function initialize()
 			$("#ins_bought").show();
 			levelBoughtIns = true;
 			levelBerries += insDatFull[levelNumber].price;
+			bankBerries += insDatFull[levelNumber].price;
 		}
 	})
 }
@@ -397,7 +399,7 @@ function loadSlingBlueberry(isSimulation)
 		{
 			traceTimes[currentBlueberry.id] = new Date();
 			tracePoints[currentBlueberry.id] = 0;
-			$("#insurance").hide();
+			// $("#insurance").hide(); // Hide after loading blueberry
 		}
 	}
 }
@@ -486,11 +488,12 @@ function nextLevel()
 		{
 			if (levelBoughtIns)
 			{
-				alert("There was a drought, but since you bought insurance, your points are protected.");
+				//alert("There was a drought, but since you bought insurance, your points are protected.");
 			}
-			else {
-				alert(`There's been a drought! You will lose ${insDatFull[levelNumber].losses} points.`);
-				totalPoints -= insDatFull[levelNumber].losses;
+			else
+			{
+				//alert(`There's been a drought! You will lose ${insDatFull[levelNumber].losses} points.`);
+				pointsLost -= insDatFull[levelNumber].losses;
 			}
 		}
 		levelNumber++;
@@ -515,11 +518,18 @@ function setupLevel()
 		currentBlueberry = null;
 	}
 
-	$("#buy_ins").show();
-	$("#ins_bought").hide();
-	$("#ins_price").text("" + insDatFull[levelNumber].price);
-	$("#dis_chance").text((insDatFull[levelNumber].prob * 100) + "%");
-	$("#pot_loss").text(insDatFull[levelNumber].losses);
+	if (levelNumber < 10)
+	{
+		$("#buy_ins").show();
+		$("#ins_bought").hide();
+		$("#ins_price").text("" + insDatFull[levelNumber].price);
+		$("#dis_chance").text((insDatFull[levelNumber].prob * 100) + "%");
+		$("#pot_loss").text(insDatFull[levelNumber].losses);
+	}
+	else
+	{
+		$("#buy_ins").hide();
+	}
 
 	spawnBars();
 	spawnObjects();

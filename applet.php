@@ -54,6 +54,8 @@ echo "
 		<img src=\"img/bload.gif\" class=\"loading\">
 		<img id=\"practice\" src=\"img/practice.gif\" class=\"message\">
 		<img id=\"game\" src=\"img/game.gif\" class=\"message\">
+		<img id=\"inc_shock_neg\" src=\"img/income_schock_negative.gif\" class=\"message\">
+		<img id=\"inc_shock_pos\" src=\"img/income_schock_positive.gif\" class=\"message\">
 	</div>
 
 	<center><h2>NOTE: DO NOT REFRESH THIS PAGE. DOING SO MIGHT PREVENT YOU FROM EARNING CREDIT FOR THIS HIT.</h2></center>

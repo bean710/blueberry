@@ -1,0 +1,174 @@
+<html>
+<head>
+  <title>Pre-game Quiz</title>
+</head>
+<body>
+  <STYLE TYPE="text/css">
+
+  a:link {
+    color: #cc3300;
+  }
+  a:visited {
+    color: #cc3300;
+  }
+  body {
+    background-color: #D4C094;
+    font-family:Verdana, sans-serif;
+    font-size: 12pt;
+    text-align: center;
+  }
+  table.gboard {
+    border-spacing: 0px;
+    vertical-align: center;
+    text-align: center; border-width: 4px;
+    border-style: solid; border-collapse: collapse;
+    border-color: #000000;
+    font-family: Verdana,sans-serif;
+    font-size: 30pt;
+  }
+  td.bcell {
+    background-color: #1A5600;
+    padding: 0px;
+    vertical-align: middle;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #000000;
+  }
+  td.acell {
+    background-color: #ffffff;
+    padding: 0px;
+    vertical-align: middle;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #000000;
+  }
+  table.tblnobord {
+    border-spacing: 0px;
+    vertical-align: middle;
+    text-align: left;
+    border-width: 0px;
+    border-style: solid;
+    border-collapse: collapse;
+    font-family: Verdana,sans-serif;
+    font-size: 16pt;
+  }
+  td.tdnobord{padding: 5px;
+    vertical-align: middle;
+    border-style: solid;
+    border-width: 0px;
+  }
+  tr.trnobord{
+    background-color: #ffffff;
+  }
+  tr.moused{
+    background-color: #eeeeee;
+  }
+  td.tdbleft{
+    border-left: 4px solid #000000;
+  }
+  td.tddash{
+    background-color: #383838;
+    padding: 5px;
+    vertical-align: top;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #444444;
+  }
+  table.tblborder {
+    border-spacing: 0px;
+    vertical-align: center;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-collapse: collapse;
+    border-color: #aaaaaa;
+    font-family: Verdana,sans-serif;
+    font-size: 16pt;
+  }
+
+  #points, #round, #rleft, #tleft {
+    font-size: 16pt;
+    color: #ffffff;
+  }
+  #container {
+    text-align: left;
+    padding: 2px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: #000000;
+    background-color: #ffffff;
+    width: 800px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+  #preload {
+    display: none;
+  }
+  </STYLE>
+  <div id="container">
+    <h1>
+      Pre-game Quiz
+    </h1>
+    <form>
+      <div>
+        <b> How much money do you get for one pineapple? </b>
+        <div>
+          <input type="radio" id="a_a" name="question_a" value="a">
+            <label for="a_a">X</label>
+        </div>
+
+        <div>
+          <input type="radio" id="a_b" name="question_a" value="b">
+            <label for="a_b">Y</label>
+        </div>
+
+        <div>
+          <input type="radio" id="a_c" name="question_a" value="c">
+            <label for="a_c">Z</label>
+        </div>
+      </div>
+      <br>
+      <div>
+        <b> How do you get the pineapples? </b>
+        <div>
+          <input type="radio" id="b_a" name="question_b" value="a">
+            <label for="b_a">The only way to get pineapples is by firing blueberries at them.</label>
+        </div>
+
+        <div>
+          <input type="radio" id="b_b" name="question_b" value="b">
+            <label for="b_b">The only way to get pineapples is to buy insurances against the potential droughts.</label>
+        </div>
+
+        <div>
+          <input type="radio" id="b_c" name="question_b" value="c">
+            <label for="b_c">I can get pineapples both by firing blueberries at them and by buying insurances against potential droughts.</label>
+        </div>
+      </div>
+      <br>
+      <div>
+        <b> How do you pay for insurances? </b>
+        <div>
+          <input type="radio" id="c_a" name="question_c" value="a">
+            <label for="c_a">You don’t have to actually pay for insurances</label>
+        </div>
+
+        <div>
+          <input type="radio" id="c_b" name="question_c" value="b">
+            <label for="c_b">The costs are subtracted from your budget of the current (and if necessary the next) level.</label>
+        </div>
+
+        <div>
+          <input type="radio" id="c_c" name="question_c" value="c">
+            <label for="c_c">The costs are subtracted from your overall budget, but it will not affect your budget of the current level.</label>
+        </div>
+      </div>
+    </form>
+    <br>
+    <center><h4><input type="button" onclick="submitQuiz()" value="Submit"></input></h4><center>
+  </div>
+
+  <script src="js/quiz.js"></script>
+</body>
+</html>
