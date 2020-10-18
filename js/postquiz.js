@@ -371,8 +371,8 @@ var quizdat2 = {
   }
 }
 
-var curQues = quizdat["4.1"];
 var curQuesKey = "4.1";
+var curQues = null;
 
 var quesEle = document.getElementById("question");
 var opABut = document.getElementById("opa");
@@ -390,30 +390,33 @@ var r2s = document.getElementsByName('r2');
 var log = [];
 
 function loadQuestion() {
+  curQues = quizdat[curQuesKey];
   quesEle.innerHTML = curQues.question;
 }
 
 function opA() {
-  log.push(1);
+  log.push(`${curQuesKey}:1`);
   if (curQues.op1 == "5") {
     part3();
     console.log(log);
     return;
   }
 
-  curQues = quizdat[curQues.op1];
+  curQuesKey = curQues.op1;
+  //curQues = quizdat[curQues.op1];
   loadQuestion();
 }
 
 function opB() {
-  log.push(2);
+  log.push(`${curQuesKey}:2`);
   if (curQues.op2 == "5") {
     part3();
     console.log(log);
     return;
   }
 
-  curQues = quizdat[curQues.op2];
+  curQuesKey = curQues.op2;
+  //curQues = quizdat[curQues.op2];
   loadQuestion();
 }
 
@@ -437,9 +440,10 @@ function part3_next() {
   if (radVal == null)
     return;
 
-  log.push(radVal);
+  log.push(`5:${radVal}`);
   console.log(log);
-  curQues = quizdat2["7.1"];
+  curQuesKey = "7.1";
+  //curQues = quizdat2["7.1"];
   part5_div.style.display = "none";
   opA_2But.style.display = "inline";
   opB_2But.style.display = "inline";
@@ -447,26 +451,28 @@ function part3_next() {
 }
 
 function opA_2() {
-  log.push(1);
+  log.push(`${curQuesKey}:1`);
   if (curQues.op1 == "8") {
     part5();
     console.log(log);
     return;
   }
 
-  curQues = quizdat2[curQues.op1];
+  curQuesKey = curQues.op1;
+  //curQues = quizdat2[curQues.op1];
   loadQuestion();
 }
 
 function opB_2() {
-  log.push(2);
+  log.push(`${curQuesKey}:2`);
   if (curQues.op2 == "8") {
     part5();
     console.log(log);
     return;
   }
 
-  curQues = quizdat2[curQues.op2];
+  curQuesKey = curQues.op2;
+  //curQues = quizdat2[curQues.op2];
   loadQuestion();
 }
 
@@ -490,7 +496,7 @@ function r2_next() {
   if (radVal == null)
     return;
 
-  log.push(radVal);
+  log.push(`8:${radVal}`);
   console.log(log);
 
   var dt1_str = log.slice(0, 5).join(",");
