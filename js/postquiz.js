@@ -180,10 +180,8 @@ var quizdat = {
     question: "Would you prefer the 50/50 chance or the amount of 310 Euro as a sure payment?",
     op1: "5",
     op2: "5"
-  }
-}
-
-var quizdat2 = {
+  },
+  
   "7.1" : {
     question: "Please consider the following: would you rather receive 100 Euro today or 154 Euro in 12 months?",
     op1: "7.17",
