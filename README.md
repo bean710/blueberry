@@ -45,10 +45,17 @@ Post-Quiz (`postquiz_results.txt`):
 CSV map:
 ---
 - Subject Number (Relates to `demographics.txt`)
-Question tree 1 answers, 1 for 50/50, 2 for Sure Payment
+Question tree 1 answers, 1 for 50/50, 2 for Sure Payment. Looks like "y.y:x" where y is the question number and x is 1 or 2.
 - qt1_1
 - qt1_2
 - qt1_3
 - qt1_4
 - qt1_5
-- 0 - 10 for first risk-assessment
+- 0 - 10 for first risk-assessment. Looks like "5:x" where x is the answer.
+Question tree 2 answers, 1 for 50/50, 2 for Sure Payment
+- qt2_1
+- qt2_2
+- qt2_3
+- qt2_4
+- qt2_5
+- 0 - 10 for second risk-assessment
