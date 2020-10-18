@@ -573,7 +573,7 @@ function outOfBlueberries()
 		endPractice();
 	else
 	{
-		window.location.href = window.location.href.replace("applet.php", "demographics.php" + getDataParameters());
+		window.location.href = window.location.href.replace("applet.php", "postquiz.php" + getDataParameters());
 	}
 }
 

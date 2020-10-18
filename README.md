@@ -39,3 +39,16 @@ CSV map:
 - Expected value
 - Reasonable (1 or 0)
 - Does the drought happen? 1 for yes, 0 for no
+
+Post-Quiz (`postquiz_results.txt`):
+===
+CSV map:
+---
+- Subject Number (Relates to `demographics.txt`)
+Question tree 1 answers, 1 for 50/50, 2 for Sure Payment
+- qt1_1
+- qt1_2
+- qt1_3
+- qt1_4
+- qt1_5
+- 0 - 10 for first risk-assessment
