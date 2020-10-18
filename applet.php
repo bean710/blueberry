@@ -45,7 +45,9 @@ echo "
 			Buy Insurance<br>
 			<div id=\"ins_info\">
 				Price: <span id=\"ins_price\"></span><br>
-				Chance of Disaster: <span id=\"dis_chance\"></span>
+				".
+				#Chance of Disaster: <span id=\"dis_chance\"></span>
+				"
 				Potential Loss: <span id=\"pot_loss\"></span>
 			</div>
 			<div id=\"buy_ins\">Buy</div>

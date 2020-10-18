@@ -33,6 +33,7 @@ CSV map:
 - Array (Separated by `#`) of Time (in milliseconds) spent aiming each Blueberry
 - Array (Separated by `#`) of Errors(?) (Seems to never be used)
 - Insurance bought? 1 for bought, 0 for not bought
+- ID of the insurance for the level, reference to richdat.csv or poordat.csv
 - Price
 - Displayed probability
 - Number of Blueberries (potentially) lost

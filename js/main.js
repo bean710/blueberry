@@ -129,6 +129,7 @@ function initialize()
 	for (var i = 0, dats = []; i < ins_arr.length; i++) {
 		dats = ins_arr[i].split(",");
 		insDatFull.push({
+			"id": dats[0],
 			"price": dats[1],
 			"prob": dats[2],
 			"losses": dats[3],
@@ -137,6 +138,16 @@ function initialize()
 			"drought": parseInt(dats[6])
 		});
 	}
+
+	insDatFull.splice(10, 1);
+
+	//Randomize insurance order
+	for (var i = insDatFull.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = insDatFull[i];
+    insDatFull[i] = insDatFull[j];
+    insDatFull[j] = temp;
+  }
 
 	console.log(insDatFull);
 
@@ -923,6 +934,7 @@ function getDataParameters()
 						"&trace=" + tracePointsString +
 						"&tracetimes=" + traceTimesString +
 						"&boughtins=" + (levelBoughtIns ? 1 : 0) +
+						"&insid=" + curIns.id +
 						"&insprice=" + curIns.price +
 						"&insprob=" + curIns.prob +
 						"&insloss=" + curIns.losses +

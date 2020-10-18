@@ -14,7 +14,7 @@ for ($i=0; $i<count($trace)-1; $i++){
 
 if ($_GET['lberries']>0) // Always true?
 	$_SESSION['data'].=$_SESSION['subjnum'].",".$_SESSION['cond'].",".$_GET['count'].",".$_GET['lberries'].",".$_GET['lpoints'].",$trace_str,$tracetime_str,$traceerror_str,";
-	$_SESSION['data'].=$_GET['boughtins'].",".$_GET['insprice'].",".$_GET['insprob'].",".$_GET['insloss'].",".$_GET['insev'].",".$_GET['insreasonable'].",".$_GET['insdrought']."\n";
+	$_SESSION['data'].=$_GET['boughtins'].",".$_GET['insid'].",".$_GET['insprice'].",".$_GET['insprob'].",".$_GET['insloss'].",".$_GET['insev'].",".$_GET['insreasonable'].",".$_GET['insdrought']."\n";
 
 if (isset($_GET['endpractice'])){
 		$outFile = "./results/practiceresults.txt";
