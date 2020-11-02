@@ -5,6 +5,14 @@ var answerKey = {
   question_c: "b"
 };
 
+var ls = window.localStorage;
+
+if (ls.getItem('quizFails') == '2')
+{
+  alert('Sorry, you are no longer eligible for the experiment.');
+  window.location = 'http://google.com';
+}
+
 function submitQuiz() {
   var ele = document.getElementsByTagName("input");
   var results = {};
@@ -21,8 +29,19 @@ function submitQuiz() {
   res = checkEqual(results, answerKey);
 
   if (res == false) {
-    alert("You did not pass the quiz, redirecting you to the intro page");
-    window.location = "intro.php";
+    var numFails = ls.getItem('quizFails');
+    if (numFails == null)
+    {
+      alert("You did not pass the quiz, redirecting you to the intro page");
+      ls.setItem('quizFails', '1');
+      window.location = "intro.php";
+    }
+    else
+    {
+      alert("You've failed the quiz twice, you are no longer eligible for the experiment.");
+      ls.setItem('quizFails', '2');
+      window.location = "http://google.com";
+    }
   } else {
     window.location = "applet.php";
   }
