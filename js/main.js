@@ -83,6 +83,7 @@ function initialize()
 	var insDat = $("param[name='ins_data']").attr("value");
 
 	$("#ins_bought").hide();
+	$("#next-btn").hide();
 
 
 	/**
@@ -425,6 +426,8 @@ function spawnBlueberry()
 // Call back after a blueberry has been fired. Handles the blueberry counter
 function blueberryFired()
 {
+	$("#next-btn").show();
+
 	if(levelBerries < berriesPerLevel) // if still have berries left for this level
 	{
 		levelBerries++; // indicate we fired a berry
@@ -488,6 +491,8 @@ function nextLevel()
 {
 	if(runningSimulation) // prevent next level working when loading
 		return;
+
+	$("#next-btn").hide();
 
 	if(levelNumber == 3 && practicing) // if this is the fourth practice level
 	{
