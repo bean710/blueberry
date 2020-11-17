@@ -3,36 +3,45 @@
 
 function init ($numconds) {
 
+	include 'db.php';
+
+	$getsett = $db->prepare('SELECT val FROM settings WHERE id=?');
+	$setsett = $db->prepare('UPDATE settings SET val=? WHERE id=?');
+
+	/*
 	$subjFile = "results/subj.txt";
 	$condFile = "results/cond.txt";
+	*/
 
 	// $numconds is the REAL number of conditions.
 
 	//$numconds = $numconds - 1; 			// Don't change this.
 
-	$fh = fopen($subjFile,'r');			// process subject number (max 99999)
-	$subj = fread($fh,5);
-	fclose($fh);
+	//GET THE CURRENT SUBJECT NUMBER
+	$getsett->execute(['subjnum']);
+	$subj = $getsett->fetch()[0];
 
+	//INCREMENT SUBJECT NUMBER LOCALLY
 	$strresults = $subj + 1;
 
-	$fh = fopen($subjFile,'w');
-	fwrite($fh,$strresults);
-	fclose($fh);
+	//UPDATE SUBJECT NUMBER IN DATABASE
+	$setsett->execute([$strresults, 'subjnum']);
 
-	$fh = fopen($condFile,'r');			// process condition number (max 99)
-	$num = fread($fh,2);
-	fclose($fh);
 
+	//GET THE CURRENT CONDITION NUMBER
+	$getsett->execute(['condnum']);
+	$num = $getsett->fetch()[0];
+
+
+	//CONDITIONALLY INCREMENT CONDITION NUMBER LOCALLY
 	$strresults = $num + 1;
 
-	if ($num > $numconds) {
+	if ($num >= $numconds - 1) {
 		$strresults = "0";
 	}
 
-	$fh = fopen($condFile,'w');
-	fwrite($fh,$strresults);
-	fclose($fh);
+	//UPDATE CONDITION NUMBER IN DATABASE
+	$setsett->execute([$strresults, 'condnum']);
 
 	if ($num == 0 || $num == 3) {
 		$insdat = file_get_contents("./results/poordat.csv");
