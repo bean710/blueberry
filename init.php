@@ -36,7 +36,7 @@ function init ($numconds) {
 	//CONDITIONALLY INCREMENT CONDITION NUMBER LOCALLY
 	$strresults = $num + 1;
 
-	if ($num >= $numconds - 1) {
+	if ($num >= $numconds) {
 		$strresults = "0";
 	}
 
