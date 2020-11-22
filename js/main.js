@@ -2,6 +2,8 @@
 // Look at slingshot example on GitHub: https://github.com/liabru/matter-js/blob/master/examples/slingshot.js
 // which can be tried out here: http://brm.io/matter-js/demo/#slingshot
 
+// If anyone comes across this file, leave while you still can
+
 $(document).ready(function()
 {
 	if(window.location.href.indexOf("localhost") > -1)
@@ -386,11 +388,16 @@ function initialize()
 	$("#buy_ins").click(function() {
 		//console.log("Clicked!");
 		if (!runningSimulation) {
-			$("#buy_ins").hide();
-			$("#ins_bought").show();
-			levelBoughtIns = true;
-			levelBerries += insDatFull[levelNumber].price;
-			bankBerries += insDatFull[levelNumber].price;
+			const thisInsPrice = Number(insDatFull[levelNumber].price);
+			if (bankBerries >= thisInsPrice)
+			{
+				$("#buy_ins").hide();
+				$("#ins_bought").show();
+				levelBoughtIns = true;
+				//levelBerries is the number of berries used
+				levelBerries = Math.min(levelBerries + thisInsPrice, berriesPerLevel);
+				bankBerries -= thisInsPrice;
+			}
 		}
 	})
 }
@@ -534,7 +541,7 @@ function setupLevel()
 		currentBlueberry = null;
 	}
 
-	if (levelNumber < 10)
+	if (insDatFull[levelNumber])
 	{
 		$("#buy_ins").show();
 		$("#ins_bought").hide();
@@ -544,7 +551,7 @@ function setupLevel()
 	}
 	else
 	{
-		$("#buy_ins").hide();
+		$("#ins_info").hide();
 	}
 
 	spawnBars();
