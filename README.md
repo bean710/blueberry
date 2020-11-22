@@ -38,7 +38,7 @@ CSV map:
 - Displayed probability
 - Number of Blueberries (potentially) lost
 - Expected value
-- Reasonable (1 or 0)
+- EV buy (in blueberries)
 - Does the drought happen? 1 for yes, 0 for no
 
 Post-Quiz (`postquiz_results.txt`):

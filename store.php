@@ -1,5 +1,7 @@
 <?php
 session_start();
+include 'db.php';
+
 $trace=explode("_",$_GET['trace']);
 $tracetimes=explode("_",$_GET['tracetimes']);
 $traceerrors=explode("_",$_GET['traceerrors']); //seems to be unused
@@ -12,9 +14,48 @@ for ($i=0; $i<count($trace)-1; $i++){
 	$traceerror_str.=$traceerrors[$i]."#"; //seems to be unused
 }
 
+$subjnum = $_SESSION['subjnum'];
+$cond = $_SESSION['cond'];
+$count = $_GET['count'];
+$lberries = $_GET['lberries'];
+$lpoints = $_GET['lpoints'];
+$boughtins = $_GET['boughtins'];
+$insprice = $_GET['insprice'];
+$insprob = $_GET['insprob'];
+$insloss = $_GET['insloss'];
+$insev = $_GET['insev'];
+$insreasonable = $_GET['insreasonable'];
+$insdrought = $_GET['insdrought'];
+
+$practice = $_GET['practice'];
+
+
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+//Add to results prepared statement
+$addRes = $db->prepare('INSERT INTO results VALUES(:subjnum, :condnum, :levelnum, :numofberries, :numofpoints, :pointsperbb,
+	:timeperbb, :errors, :insbought, :insprice, :insprob, :inspotloss, :insev, :insreasonable, :insdroughthappen)');
+//Add to practice prepared statement
+$addPrac = $db->prepare('INSERT INTO practice VALUES(:subjnum, :condnum, :levelnum, :numofberries, :numofpoints, :pointsperbb,
+	:timeperbb, :errors, :insbought, :insprice, :insprob, :inspotloss, :insev, :insreasonable, :insdroughthappen)');
+
+if ($practice == 1) {
+	$addPrac->execute(['subjnum' => $subjnum, 'condnum' => $cond, 'levelnum' => $count, 'numofberries' => $lberries,
+										'numofpoints' => $lpoints, 'pointsperbb' => $trace_str, 'timeperbb' => $tracetime_str, 'errors' => $traceerror_str,
+										'insbought' => $boughtins, 'insprice' => $insprice, 'insprob' => $insprob, 'inspotloss' => $insloss,
+										'insev' => $insev, 'insreasonable' => $insreasonable, 'insdroughthappen' => $insdrought]);
+} else {
+	$addRes->execute(['subjnum' => $subjnum, 'condnum' => $cond, 'levelnum' => $count, 'numofberries' => $lberries,
+										'numofpoints' => $lpoints, 'pointsperbb' => $trace_str, 'timeperbb' => $tracetime_str, 'errors' => $traceerror_str,
+										'insbought' => $boughtins, 'insprice' => $insprice, 'insprob' => $insprob, 'inspotloss' => $insloss,
+										'insev' => $insev, 'insreasonable' => $insreasonable, 'insdroughthappen' => $insdrought]);
+}
+
+
+
 if ($_GET['lberries']>0) // Always true?
 	$_SESSION['data'].=$_SESSION['subjnum'].",".$_SESSION['cond'].",".$_GET['count'].",".$_GET['lberries'].",".$_GET['lpoints'].",$trace_str,$tracetime_str,$traceerror_str,";
-	$_SESSION['data'].=$_GET['boughtins'].",".$_GET['insid'].",".$_GET['insprice'].",".$_GET['insprob'].",".$_GET['insloss'].",".$_GET['insev'].",".$_GET['insreasonable'].",".$_GET['insdrought']."\n";
+	$_SESSION['data'].=$_GET['boughtins']./*",".$_GET['insid'].*/",".$_GET['insprice'].",".$_GET['insprob'].",".$_GET['insloss'].",".$_GET['insev'].",".$_GET['insreasonable'].",".$_GET['insdrought']."\n";
 
 if (isset($_GET['endpractice'])){
 		$outFile = "./results/practiceresults.txt";

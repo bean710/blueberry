@@ -56,13 +56,13 @@ for ($i=0;$i<count($temp)-1;$i++){
 	$str3.=$temp3[$i]."#";
 }
 
-if ($_GET['lberries']>0)
-    $_SESSION['data'].=$_SESSION['subjnum'].",".$_SESSION['cond'].",".$_GET['count'].",".$_GET['lberries'].",".$_GET['lpoints'].",$trace_str,$tracetime_str,$traceerror_str,";
-    $_SESSION['data'].=$_GET['boughtins'].",".$_GET['insprice'].",".$_GET['insprob'].",".$_GET['insloss'].",".$_GET['insev'].",".$_GET['insreasonable'].",".$_GET['insdrought']."\n";
-		$outFile = "./results/results.txt";
-		$fh = fopen($outFile,'a');
-		fwrite($fh, $_SESSION['data']);
-		fclose($fh);
+//if ($_GET['lberries']>0)
+$_SESSION['data'].=$_SESSION['subjnum'].",".$_SESSION['cond'].",".$_GET['count'].",".$_GET['lberries'].",".$_GET['lpoints'].",$trace_str,$tracetime_str,$traceerror_str,";
+$_SESSION['data'].=$_GET['boughtins'].",".$_GET['insprice'].",".$_GET['insprob'].",".$_GET['insloss'].",".$_GET['insev'].",".$_GET['insreasonable'].",".$_GET['insdrought']."\n";
+$outFile = "./results/results.txt";
+$fh = fopen($outFile,'a');
+fwrite($fh, $_SESSION['data']);
+fclose($fh);
 
 
 

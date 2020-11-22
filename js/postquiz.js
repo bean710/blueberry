@@ -181,7 +181,7 @@ var quizdat = {
     op1: "5",
     op2: "5"
   },
-  
+
   "7.1" : {
     question: "Please consider the following: would you rather receive 100 Euro today or 154 Euro in 12 months?",
     op1: "7.17",
@@ -511,7 +511,8 @@ function r2_next() {
     success: function(data) {
       console.log("Success postquiz store");
       console.log(data);
-      document.location = "demographics.php";
+      //document.location = "demographics.php";
+  		window.location.href = window.location.href.replace("postquiz.php", "demographics.php");
     }
   });
 

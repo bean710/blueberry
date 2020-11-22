@@ -14,7 +14,7 @@ $(document).ready(function()
 });
 
 
-var debug = false; // Set to true to enable some console logs
+var debug = true; // Set to true to enable some console logs
 
 
 // Collision Filters
@@ -500,7 +500,7 @@ function nextLevel()
 	}
 	else
 	{
-		if (levelNumber > 3 && insDatFull[levelNumber].drought)
+		if (levelNumber > 3 && insDatFull[levelNumber] && insDatFull[levelNumber].drought)
 		{
 			if (levelBoughtIns)
 			{
@@ -932,6 +932,17 @@ function getDataParameters()
 	var traceTimesString = traceTimesArr.join("_") + "_";
 
 	var curIns = insDatFull[levelNumber];
+	if (!curIns) {
+		curIns = {
+			id: -1,
+			price: -1,
+			prob: -1,
+			losses: -1,
+			ev: -1,
+			reasonable: -1,
+			drought: -1
+		};
+	}
 
 	var url = "?count=" + levelNumber +
 						"&lberries=" + levelBerries +
@@ -945,7 +956,8 @@ function getDataParameters()
 						"&insloss=" + curIns.losses +
 						"&insev=" + curIns.ev +
 						"&insreasonable=" + curIns.reasonable +
-						"&insdrought=" + curIns.drought;
+						"&insdrought=" + curIns.drought +
+						"&practice=" + (practicing ? 1 : 0);
 
 	if (debug){
 		var outObj = {
