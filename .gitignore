@@ -1,2 +1,4 @@
 composer.phar
 vendor/
+results/
+.DS_Store
