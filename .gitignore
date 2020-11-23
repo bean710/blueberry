@@ -1,5 +1,6 @@
 composer.phar
 vendor/
-results/
 .DS_Store
-/results
+/results/*
+!richdat.csv
+!poordat.csv
