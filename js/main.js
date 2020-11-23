@@ -152,6 +152,9 @@ function initialize()
     insDatFull[j] = temp;
   }
 
+	// Add 4 null insurances for the 4 practice rounds
+	insDatFull.splice(0, 0, null, null, null, null);
+
 	console.log(insDatFull);
 
 	// Set variables from URL
@@ -551,7 +554,7 @@ function setupLevel()
 	}
 	else
 	{
-		$("#ins_info").hide();
+		$("#insurance").hide();
 	}
 
 	spawnBars();
