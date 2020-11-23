@@ -2,5 +2,5 @@ composer.phar
 vendor/
 .DS_Store
 /results/*
-!richdat.csv
-!poordat.csv
+!*richdat.csv
+!*poordat.csv
