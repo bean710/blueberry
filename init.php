@@ -36,7 +36,9 @@ function init ($numconds) {
 	//CONDITIONALLY INCREMENT CONDITION NUMBER LOCALLY
 	$strresults = $num + 1;
 
-	if ($num >= $numconds) {
+	// Numconds is passed in by intro for the number of conditions
+	// originally for borrowing being enabled or not, but now unused
+	if ($num == $numconds - 1) {
 		$strresults = "0";
 	}
 
