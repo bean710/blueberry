@@ -8,4 +8,6 @@ $db = (function() {
   return new PDO("pgsql:host={$host};port={$port};dbname={$path};sslmode=require;sslcert=;sslkey=;", $user, $pass);
 })();
 
+$getsett = $db->prepare('SELECT val FROM settings WHERE id=?');
+
  ?>
