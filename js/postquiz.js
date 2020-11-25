@@ -511,8 +511,8 @@ function r2_next() {
     success: function(data) {
       console.log("Success postquiz store");
       console.log(data);
-      //document.location = "demographics.php";
-  		window.location.href = window.location.href.replace("postquiz.php", "demographics.php");
+      document.location = "demographics.php";
+  		//window.location.href = window.location.href.replace("postquiz.php", "demographics.php");
     }
   });
 

@@ -44,18 +44,8 @@ echo "<script type=\"text/javascript\" src=\"formcheck.js\"></script><br><br><b>
 	echo "</form>";
 
 	//write data.
-$temp=explode("_",$_GET['trace']);
-$temp2=explode("_",$_GET['tracetimes']);
-$temp3=explode("_",$_GET['traceerrors']);
-$str="";
-$str2="";
-$str3="";
-for ($i=0;$i<count($temp)-1;$i++){
-	$str.=$temp[$i]."#";
-	$str2.=$temp2[$i]."#";
-	$str3.=$temp3[$i]."#";
-}
 
+/*
 //if ($_GET['lberries']>0)
 $_SESSION['data'].=$_SESSION['subjnum'].",".$_SESSION['cond'].",".$_GET['count'].",".$_GET['lberries'].",".$_GET['lpoints'].",$trace_str,$tracetime_str,$traceerror_str,";
 $_SESSION['data'].=$_GET['boughtins'].",".$_GET['insprice'].",".$_GET['insprob'].",".$_GET['insloss'].",".$_GET['insev'].",".$_GET['insreasonable'].",".$_GET['insdrought']."\n";
@@ -63,6 +53,7 @@ $outFile = "./results/results.txt";
 $fh = fopen($outFile,'a');
 fwrite($fh, $_SESSION['data']);
 fclose($fh);
+*/
 
 
 

@@ -52,6 +52,7 @@ echo "<div id=\"container\">";
       }
       */
       init(4);
+      $_SESSION['time']=time();
 
 			if ($_SESSION['cond']==0 || $_SESSION['cond']==2){
         $_SESSION['per'] = 3;

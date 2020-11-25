@@ -3,6 +3,8 @@
 
 session_start();
 
+include 'db.php';
+
 
 echo "<html> <title>Angry Blueberries</title><body><head><STYLE TYPE=\"text/css\">
 
@@ -33,15 +35,24 @@ table.tblborder {border-spacing: 0px; vertical-align: center; text-align: center
 echo "<div id=\"container\">";
 
 $_SESSION['time']=time()-$_SESSION['time'];
-		$outFile = "results/demographics.txt";
+
+$addDemo = $db->prepare('INSERT INTO demographics VALUES(:subjnum, :cond, :age, :gender, :race, :email, :timetext)');
+
+$addDemo->execute(['subjnum' => $_SESSION['subjnum'], 'cond' => $_SESSION['cond'], 'age' => $_POST['age'],
+  'gender' => $_POST['gender'], 'race' => $_POST['race'], 'email' => $_POST['email'], 'timetext' => $_SESSION['time']]);
+
+  /*
+	$outFile = "results/demographics.txt";
 	$fh = fopen($outFile,'a');
 	$stringData = $_SESSION['subjnum'] . "," . $_SESSION['cond'] . "," . $_POST['age'] . "," . $_POST['gender'] . "," . $_POST['race'] .",".$_POST['email']."\n";
 	fwrite($fh, $stringData);
 	fclose($fh);
+  */
 	$num=$_SESSION['subjnum']."000".rand(100,999);
-	
+
 	echo "<br><br>You have completed this game.  Your number is " . $num . ".  Thank you for participating.<br><br>";
-	
-session_destroy();
-	
+
+//TODO: UNCOMMENT THIS
+//session_destroy();
+
 ?>
