@@ -4,14 +4,14 @@ include 'db.php';
 
 $trace=explode("_",$_GET['trace']);
 $tracetimes=explode("_",$_GET['tracetimes']);
-$traceerrors=explode("_",$_GET['traceerrors']); //seems to be unused
+//$traceerrors=explode("_",$_GET['traceerrors']); //seems to be unused
 $trace_str="";
 $tracetime_str="";
 $traceerror_str="";
 for ($i=0; $i<count($trace)-1; $i++){
 	$trace_str.=$trace[$i]."#";
 	$tracetime_str.=$tracetimes[$i]."#";
-	$traceerror_str.=$traceerrors[$i]."#"; //seems to be unused
+	//$traceerror_str.=$traceerrors[$i]."#"; //seems to be unused
 }
 
 $subjnum = $_SESSION['subjnum'];
