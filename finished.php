@@ -41,13 +41,6 @@ $addDemo = $db->prepare('INSERT INTO demographics VALUES(:subjnum, :cond, :age, 
 $addDemo->execute(['subjnum' => $_SESSION['subjnum'], 'cond' => $_SESSION['cond'], 'age' => $_POST['age'],
   'gender' => $_POST['gender'], 'race' => $_POST['race'], 'email' => $_POST['email'], 'timetext' => $_SESSION['time']]);
 
-  /*
-	$outFile = "results/demographics.txt";
-	$fh = fopen($outFile,'a');
-	$stringData = $_SESSION['subjnum'] . "," . $_SESSION['cond'] . "," . $_POST['age'] . "," . $_POST['gender'] . "," . $_POST['race'] .",".$_POST['email']."\n";
-	fwrite($fh, $stringData);
-	fclose($fh);
-  */
 	$num=$_SESSION['subjnum']."000".rand(100,999);
 
 	echo "<br><br>You have completed this game.  Your number is " . $num . ".  Thank you for participating.<br><br>";

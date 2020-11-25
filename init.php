@@ -8,14 +8,6 @@ function init ($numconds) {
 	$getsett = $db->prepare('SELECT val FROM settings WHERE id=?');
 	$setsett = $db->prepare('UPDATE settings SET val=? WHERE id=?');
 
-	/*
-	$subjFile = "results/subj.txt";
-	$condFile = "results/cond.txt";
-	*/
-
-	// $numconds is the REAL number of conditions.
-
-	//$numconds = $numconds - 1; 			// Don't change this.
 
 	//GET THE CURRENT SUBJECT NUMBER
 	$getsett->execute(['subjnum']);
