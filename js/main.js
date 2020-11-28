@@ -611,14 +611,22 @@ function endPractice()
 
 	if (conditionParam == 2)
 	{
-		alert("INCOME SHOCK");
+		$("#inc_shock_pos").show();
+		$("#inc_shock_pos").click(() => {
+			$("#inc_shock_pos").hide();
+		});
+		//alert("INCOME SHOCK");
 		berriesPerLevel = 15;
 		initialBankBerries = 150;
 		berryBankPenalty = -1;
 	}
 	else if (conditionParam == 3)
 	{
-		alert("INCOME SHOCK");
+		$("#inc_shock_neg").show();
+		$("#inc_shock_neg").click(() => {
+			$("#inc_shock_neg").hide();
+		});
+		//alert("INCOME SHOCK");
 		berriesPerLevel = 3;
 		initialBankBerries = 30;
 		berryBankPenalty = -1;
