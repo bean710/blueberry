@@ -68,7 +68,8 @@ echo "<div id=\"container\">";
       $tot=$per*10;
       $potpayout=$fieldpineapples*$cpp;
 
-      echo "Thank you for playing Angry Blueberries! This is a classic slingshot video game, played using only your mouse. In this game, you shoot blueberries at pineapples and each time you hit a pineapple, you can harvest it. Each pineapple is worth $$cpp, so your goal should be to harvest as many pineapples as you can! You will receive a bonus payment according to the number of pineapples you harvest throughout the game.
+      echo "Thank you for playing Angry Blueberries! This is a classic slingshot video game, played using only your mouse. In this game, you shoot blueberries at pineapples and each time you hit a pineapple, you can harvest it. Each pineapple is worth $$cpp, so your goal should be to harvest as many pineapples as you can! You will receive a bonus payment according to the number of pineapples you harvest throughout the game.<br><br>
+        Please read the following instructions on how to play very carefully. Before you can play and earn pineapples, you will have to answer three questions about the game rules. For each question, if you don’t get it right on your first try, you will be directed back to the instructions and then you can try again. If you don’t get a question right the second time, you cannot proceed to the game and your HIT will be rejected.<br><br>
         Below is a screenshot of the game: <br><br><center><img src=\"instructions.gif\"></center><br>
         On each level, there are 7 pineapples. If you hit all 7 pineapples in a level, you earn 3 bonus pineapples!<br><br>
         To load a blueberry, simply click the blueberry chute (the grey rectangle in the lower left of the screen). Once the blueberry is loaded into the slingshot, pull the blueberry back and aim. Fire the blueberry by releasing it. It's that simple. Watch out for obstacles in the level--if you hit the black holes, it'll be a wasted shot.<br><br>
