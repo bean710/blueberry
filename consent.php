@@ -7,6 +7,12 @@ session_destroy();
 session_start();
 session_regenerate_id();
 
+readfile("html/consent.html");
+
+/*
+echo "<html>";
+echo "<body>";
+
 echo "<p align='center'>
     Insert your consent form here.
 ";
@@ -21,5 +27,6 @@ echo "</center>";
 
 echo "</body>";
 echo "</html>";
+*/
 
 ?>
