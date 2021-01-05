@@ -86,6 +86,7 @@ function initialize()
 
 	$("#ins_bought").hide();
 	$("#next-btn").hide();
+	$(".inc_message").hide();
 
 
 	/**

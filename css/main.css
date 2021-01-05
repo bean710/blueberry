@@ -87,6 +87,15 @@ body
 	text-align: center;
 }
 
+img.inc_message
+{
+	position: absolute;
+	top: 27.5px;
+	left: 99px;
+	width: 522px;
+	height: 115px;
+}
+
 img.message
 {
 	position: absolute;
