@@ -55,8 +55,8 @@ echo "
 		</div>
 		<img src=\"img/bload.gif\" class=\"loading\">
 		<img id=\"practice\" src=\"img/practice.gif\" class=\"message\">
-		<img id=\"inc_shock_neg\" src=\"img/income_shock_negative.gif\" class=\"message\">
-		<img id=\"inc_shock_pos\" src=\"img/income_shock_positive.gif\" class=\"message\">
+		<img id=\"inc_shock_neg\" src=\"img/income_shock_negative.gif\" class=\"inc_message\">
+		<img id=\"inc_shock_pos\" src=\"img/income_shock_positive.gif\" class=\"inc_message\">
 		<img id=\"game\" src=\"img/game.gif\" class=\"message\">
 	</div>
 
