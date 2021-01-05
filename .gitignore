@@ -4,3 +4,4 @@ vendor/
 /results/*
 !*richdat.csv
 !*poordat.csv
+.DS_Store
