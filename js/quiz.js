@@ -43,6 +43,7 @@ function submitQuiz() {
       window.location = "http://google.com";
     }
   } else {
+    alert("Great! You answered all questions correctly. We'll get you started with a few practice rounds.");
     window.location = "applet.php";
   }
 }
