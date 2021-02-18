@@ -39,7 +39,6 @@ echo "<script type=\"text/javascript\" src=\"formcheck.js\"></script><br><br><b>
 	echo "<input type='radio' name='gender' value='f' />F";
 	echo "<br /><br />Age: <input type='text' size='3' name='age' />";
 	echo "<br /><br />Race/Ethnicity: <input type='text' size='20' name='race' />";
-	echo "<br /><br />Email: <input type='text' size='20' name='email' />";
 	echo "<br /><br /><input type='submit' onClick='valform(this.parentNode); return false;' value='Submit' />";
 	echo "</form>";
 
