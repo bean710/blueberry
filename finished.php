@@ -36,10 +36,10 @@ echo "<div id=\"container\">";
 
 $_SESSION['time']=time()-$_SESSION['time'];
 
-$addDemo = $db->prepare('INSERT INTO demographics VALUES(:subjnum, :cond, :age, :gender, :race, :email, :timetext)');
+$addDemo = $db->prepare('INSERT INTO demographics VALUES(:subjnum, :cond, :age, :gender, :race, :timetext)');
 
 $addDemo->execute(['subjnum' => $_SESSION['subjnum'], 'cond' => $_SESSION['cond'], 'age' => $_POST['age'],
-  'gender' => $_POST['gender'], 'race' => $_POST['race'], 'email' => $_POST['email'], 'timetext' => $_SESSION['time']]);
+  'gender' => $_POST['gender'], 'race' => $_POST['race'], 'timetext' => $_SESSION['time']]);
 
 // Get the total number of points lost by not buying insurance
 $getLosses = $db->prepare('SELECT subjnum, SUM(inspotloss) from results where subjnum=:subj AND insbought=0 AND insdroughthappen=1 GROUP BY subjnum');
@@ -91,7 +91,7 @@ echo "Your field started with $startingNum pineapples, but you lost $losses pine
 
 $num=$_SESSION['subjnum']."000".rand(100,999);
 
-echo "<br><br>You have completed this game.  Your number is " . $num . ".  Thank you for participating. You may now exit this tab/window.<br><br>";
+echo "<br><br>You have completed this game.  Your code is ABF" . $num . ". Please copy and paste this code back into mTurk. Please make sure you copy the complete code, as we will not be able to pay you the bonus in case part of it is missng. Thank you for participating. You may now exit this tab/window.<br><br>";
 
 //TODO: UNCOMMENT THIS
 //session_destroy();
