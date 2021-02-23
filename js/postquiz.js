@@ -1,369 +1,369 @@
 var quizdat = {
   "4.1" : {
-    question: "What would you prefer: a draw with a 50 percent chance of receiving 300 Euro, and the same 50 percent chance of receiving nothing, or the amount of 160 Euro as a sure payment?",
+    question: "What would you prefer: a draw with a 50 percent chance of receiving 450 U.S. dollars, and the same 50 percent chance of receiving nothing, or the amount of 240 U.S. dollars as a sure payment?",
     op1: "4.17",
     op2: "4.2"
   },
 
   "4.2" : {
-    question: "Would you prefer the 50/50 chance or the amount of 80 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 120 U.S. dollars as a sure payment?",
     op1: "4.10",
     op2: "4.3"
   },
 
   "4.3" : {
-    question: "Would you prefer the 50/50 chance or the amount of 40 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 60 U.S. dollars as a sure payment?",
     op1: "4.4",
     op2: "4.7"
   },
 
   "4.4" : {
-    question: "Would you prefer the 50/50 chance or the amount of 60 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 90 U.S. dollars as a sure payment?",
     op1: "4.5",
     op2: "4.6"
   },
 
   "4.5" : {
-    question: "Would you prefer the 50/50 chance or",
+    question: "Would you prefer the 50/50 chance or the amount of 105 U.S. dollars as a sure payment",
     op1: "5",
     op2: "5"
   },
   "4.6" : {
-    question: "Would you prefer the 50/50 chance or the amount of 50 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 75 U.S. dollars as a sure payment?",
     op1: "5",
     op2: "5"
   },
   "4.7" : {
-    question: "Would you prefer the 50/50 chance or the amount of 20 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 30 U.S. dollars as a sure payment?",
     op1: "4.8",
     op2: "4.9"
   },
 
   "4.8" : {
-    question: "Would you prefer the 50/50 chance or the amount of 30 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 45 U.S. dollars as a sure payment?",
     op1: "5",
     op2: "5"
   },
   "4.9" : {
-    question: "Would you prefer the 50/50 chance or the amount of 10 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 15 U.S. dollars as a sure payment?",
     op1: "5",
     op2: "5"
   },
 
   "4.10" : {
-    question: "Would you prefer the 50/50 chance or the amount of 120 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 180 U.S. dollars as a sure payment?",
     op1: "4.14",
     op2: "4.11"
   },
 
   "4.11" : {
-    question: "Would you prefer the 50/50 chance or the amount of 100 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 150 U.S. dollars as a sure payment?",
     op1: "4.13",
     op2: "4.12"
   },
 
   "4.12" : {
-    question: "Would you prefer the 50/50 chance or the amount of 90 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 135 U.S. dollars as a sure payment?",
     op1: "5",
     op2: "5"
   },
 
   "4.13" : {
-    question: "Would you prefer the 50/50 chance or the amount of 110 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 165 U.S. dollars as a sure payment?",
     op1: "5",
     op2: "5"
   },
 
   "4.14" : {
-    question: "Would you prefer the 50/50 chance or the amount of 140 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 210 U.S. dollars as a sure payment?",
     op1: "4.15",
     op2: "4.16"
   },
 
   "4.15" : {
-    question: "Would you prefer the 50/50 chance or the amount of 150 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 225 U.S. dollars as a sure payment?",
     op1: "5",
     op2: "5"
   },
 
   "4.16" : {
-    question: "Would you prefer the 50/50 chance or the amount of 130 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 195 U.S. dollars as a sure payment?",
     op1: "5",
     op2: "5"
   },
 
   "4.17" : {
-    question: "Would you prefer the 50/50 chance or the amount of 240 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 360 U.S. dollars as a sure payment?",
     op1: "4.25",
     op2: "4.18"
   },
 
   "4.18" : {
-    question: "Would you prefer the 50/50 chance or the amount of 200 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 300 U.S. dollars as a sure payment?",
     op1: "4.22",
     op2: "4.19"
   },
 
   "4.19" : {
-    question: "Would you prefer the 50/50 chance or the amount of 180 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 270 U.S. dollars as a sure payment?",
     op1: "4.20",
     op2: "4.21"
   },
 
   "4.20" : {
-    question: "Would you prefer the 50/50 chance or the amount of 190 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 285 U.S. dollars as a sure payment?",
     op1: "5",
     op2: "5"
   },
 
   "4.21" : {
-    question: "Would you prefer the 50/50 chance or the amount of 170 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 255 U.S. dollars as a sure payment?",
     op1: "5",
     op2: "5"
   },
 
   "4.22" : {
-    question: "Would you prefer the 50/50 chance or the amount of 220 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 330 U.S. dollars as a sure payment?",
     op1: "4.23",
     op2: "4.24"
   },
 
   "4.23" : {
-    question: "Would you prefer the 50/50 chance or the amount of 230 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 345 U.S. dollars as a sure payment?",
     op1: "5",
     op2: "5"
   },
 
   "4.24" : {
-    question: "Would you prefer the 50/50 chance or the amount of 210 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 315 U.S. dollars as a sure payment?",
     op1: "5",
     op2: "5"
   },
 
   "4.25" : {
-    question: "Would you prefer the 50/50 chance or the amount of 280 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 420 U.S. dollars as a sure payment?",
     op1: "4.29",
     op2: "4.26"
   },
 
   "4.26" : {
-    question: "Would you prefer the 50/50 chance or the amount of 260 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 390 U.S. dollars as a sure payment?",
     op1: "4.27",
     op2: "4.28"
   },
 
   "4.27" : {
-    question: "Would you prefer the 50/50 chance or the amount of 270 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 405 U.S. dollars as a sure payment?",
     op1: "5",
     op2: "5"
   },
 
   "4.28" : {
-    question: "Would you prefer the 50/50 chance or the amount of 250 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 375 U.S. dollars as a sure payment?",
     op1: "5",
     op2: "5"
   },
 
   "4.29" : {
-    question: "Would you prefer the 50/50 chance or the amount of 300 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 450 U.S. dollars as a sure payment?",
     op1: "4.31",
     op2: "4.30"
   },
 
   "4.30" : {
-    question: "Would you prefer the 50/50 chance or the amount of 290 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 435 U.S. dollars as a sure payment?",
     op1: "5",
     op2: "5"
   },
 
   "4.31" : {
-    question: "Would you prefer the 50/50 chance or the amount of 310 Euro as a sure payment?",
+    question: "Would you prefer the 50/50 chance or the amount of 465 U.S. dollars as a sure payment?",
     op1: "5",
     op2: "5"
   },
 
   "7.1" : {
-    question: "Please consider the following: would you rather receive 100 Euro today or 154 Euro in 12 months?",
+    question: "Please consider the following: Would you rather receive 160 U.S. dollars today or 246 U.S. dollars in 12 months?",
     op1: "7.17",
     op2: "7.2"
   },
 
   "7.2" : {
-    question: "Would you rather receive 100 Euro today or 125 Eur",
+    question: "Would you rather receive 160 U.S. dollars today or 201 U.S. dollars in 12 months?",
     op1: "7.10",
     op2: "7.3"
   },
 
   "7.3" : {
-    question: "Would you rather receive 100 Euro today or 112 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 180 U.S. dollars in 12 months?",
     op1: "7.7",
     op2: "7.4"
   },
 
   "7.4" : {
-    question: "Would you rather receive 100 Euro today or 106 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 170 U.S. dollars in 12 months?",
     op1: "7.6",
     op2: "7.5"
   },
 
   "7.5" : {
-    question: "Would you rather receive 100 Euro today or 103 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 165 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   },
 
   "7.6" : {
-    question: "Would you rather receive 100 Euro today or 109 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 175 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   },
 
   "7.7" : {
-    question: "Would you rather receive 100 Euro today or 119 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 190 U.S. dollars in 12 months?",
     op1: "7.8",
     op2: "7.9"
   },
 
   "7.8" : {
-    question: "Would you rather receive 100 Euro today or 122 Euro in 12months?",
+    question: "Would you rather receive 160 U.S. dollars today or 195 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   },
 
   "7.9" : {
-    question: "Would you rather receive 100 Euro today or 116 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 185 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   },
 
   "7.10" : {
-    question: "Would you rather receive 100 Euro today or 139 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 223 U.S. dollars in 12 months?",
     op1: "7.14",
     op2: "7.11"
   },
 
   "7.11" : {
-    question: "Would you rather receive 100 Euro today or 132 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 212 U.S. dollars in 12 months?",
     op1: "7.13",
     op2: "7.12"
   },
 
   "7.12" : {
-    question: "Would you rather receive 100 Euro today or 129 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 206 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   },
 
   "7.13" : {
-    question: "Would you rather receive 100 Euro today or",
+    question: "Would you rather receive 160 U.S. dollars today or 217 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   },
 
   "7.14" : {
-    question: "Would you rather receive 100 Euro today or 146 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 234 U.S. dollars in 12 months?",
     op1: "7.16",
     op2: "7.15"
   },
 
   "7.15" : {
-    question: "Would you rather receive 100 Euro today or 143 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 228 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   },
 
   "7.16" : {
-    question: "Would you rather receive 100 Euro today or 150 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 240 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   },
 
   "7.17" : {
-    question: "Would you rather receive 100 Euro today or 185 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 296 U.S. dollars in 12 months?",
     op1: "7.18",
     op2: "7.25"
   },
 
   "7.18" : {
-    question: "Would you rather receive 100 Euro today or 202 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 323 U.S. dollars in 12 months?",
     op1: "7.22",
     op2: "7.19"
   },
 
   "7.19" : {
-    question: "Would you rather receive 100 Euro today or 193 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 309 U.S. dollars in 12 months?",
     op1: "7.20",
     op2: "7.21"
   },
 
   "7.20" : {
-    question: "Would you rather receive 100 Euro today or 197 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 316 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   },
 
   "7.21" : {
-    question: "Would you rather receive 100 Euro today or 189 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 303 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   },
 
   "7.22" : {
-    question: "Would you rather receive 100 Euro today or 210 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 336 U.S. dollars in 12 months?",
     op1: "7.23",
     op2: "7.24"
   },
 
   "7.23" : {
-    question: "Would you rather receive 100 Euro today or 215 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 343 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   },
 
   "7.24" : {
-    question: "Would you rather receive 100 Euro today or 206 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 329 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   },
 
   "7.25" : {
-    question: "Would you rather receive 100 Euro today or 169 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 270 U.S. dollars in 12 months?",
     op1: "7.29",
     op2: "7.26"
   },
 
   "7.26" : {
-    question: "Would you rather receive 100 Euro today or 161 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 258 U.S. dollars in 12 months?",
     op1: "7.28",
     op2: "7.27"
   },
 
   "7.27" : {
-    question: "Would you rather receive 100 Euro today or 158 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 252 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   },
 
   "7.28" : {
-    question: "Would you rather receive 100 Euro today or 165 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 264 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   },
 
   "7.29" : {
-    question: "Would you rather receive 100 Euro today or 177 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 283 U.S. dollars in 12 months?",
     op1: "7.31",
     op2: "7.30"
   },
 
   "7.30" : {
-    question: "Would you rather receive 100 Euro today or 173 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 277 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   },
 
   "7.31" : {
-    question: "Would you rather receive 100 Euro today or 181 Euro in 12 months?",
+    question: "Would you rather receive 160 U.S. dollars today or 290 U.S. dollars in 12 months?",
     op1: "8",
     op2: "8"
   }
