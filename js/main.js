@@ -545,7 +545,7 @@ function setupLevel()
 		currentBlueberry = null;
 	}
 
-	if (insDatFull[levelNumber])
+	if (!practicing && levelNumber < insDatFull.length)
 	{
 		$("#buy_ins").show();
 		$("#ins_bought").hide();
@@ -784,8 +784,11 @@ function spawnObjects()
 		runningSimulation = false; // indicate we're done with runningSimulation = false
 
 		$(".message, .loading").hide(); // and hiding loading
-		if (!practicing)
+		
+		if (!practicing && levelNumber < insDatFull.length)
 			$("#insurance").show();
+		else
+			$("#insurance").hide();
 	}
 
 	// The main function execution
