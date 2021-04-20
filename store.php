@@ -39,7 +39,10 @@ $addRes = $db->prepare('INSERT INTO results VALUES(:subjnum, :condnum, :levelnum
 $addPrac = $db->prepare('INSERT INTO practice VALUES(:subjnum, :condnum, :levelnum, :numofberries, :numofpoints, :pointsperbb,
 	:timeperbb, :errors, :insbought, :insprice, :insprob, :inspotloss, :insev, :insreasonable, :insdroughthappen)');
 
+echo "store message recieved";
+
 if ($practice == 1) {
+	echo "entering into practice";
 	$addPrac->execute(['subjnum' => $subjnum, 'condnum' => $cond, 'levelnum' => $count, 'numofberries' => $lberries,
 										'numofpoints' => $lpoints, 'pointsperbb' => $trace_str, 'timeperbb' => $tracetime_str, 'errors' => $traceerror_str,
 										'insbought' => $boughtins, 'insprice' => $insprice, 'insprob' => $insprob, 'inspotloss' => $insloss,
@@ -51,18 +54,5 @@ if ($practice == 1) {
 										'insev' => $insev, 'insreasonable' => $insreasonable, 'insdroughthappen' => $insdrought]);
 }
 
-
-
-if ($_GET['lberries']>0) // Always true?
-	$_SESSION['data'].=$_SESSION['subjnum'].",".$_SESSION['cond'].",".$_GET['count'].",".$_GET['lberries'].",".$_GET['lpoints'].",$trace_str,$tracetime_str,$traceerror_str,";
-	$_SESSION['data'].=$_GET['boughtins']./*",".$_GET['insid'].*/",".$_GET['insprice'].",".$_GET['insprob'].",".$_GET['insloss'].",".$_GET['insev'].",".$_GET['insreasonable'].",".$_GET['insdrought']."\n";
-
-if (isset($_GET['endpractice'])){
-		$outFile = "./results/practiceresults.txt";
-		$fh = fopen($outFile,'a');
-		fwrite($fh, $_SESSION['data']);
-		fclose($fh);
-		$_SESSION['data']="";
-}
 
 ?>
