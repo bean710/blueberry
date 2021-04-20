@@ -4,4 +4,7 @@ vendor/
 /results/*
 !*richdat.csv
 !*poordat.csv
-.DS_Store
+*.DS_Store
+db.php
+dbtest.php
+ip.txt
