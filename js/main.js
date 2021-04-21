@@ -600,6 +600,7 @@ function outOfBlueberries()
 		endPractice();
 	else
 	{
+		alert("Thanks for playing the game! You are almost done! In the following we will ask you to answer some short questions. This will take another 5 minutes. We will then provide you with a summary of how you did in the game and about your payout. You will receive your bonus payment within the next two days.");
 		window.location.href = window.location.href.replace("applet.php", "postquiz.php" + getDataParameters());
 	}
 }
