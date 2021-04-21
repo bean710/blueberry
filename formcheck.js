@@ -14,8 +14,11 @@ function valform(thisform) {
 		if (chex == 0) {
 			if (inputarr[i].type == "text") {
 				if (inputarr[i].value == "") {
-					alert("You must fill out the field: " + inputarr[i].name);
-					chex = 1;
+					if (!(inputarr[i].name == "gender_other" && $('input[name="gender"]:checked').val() != "other"))
+					{
+						alert("You must fill out the field: " + inputarr[i].name);
+						chex = 1;
+					}
 				}
 			}
 			if (inputarr[i].type == "radio") {

@@ -36,10 +36,15 @@ echo "<div id=\"container\">";
 
 $_SESSION['time']=time()-$_SESSION['time'];
 
+$gender = $_POST['gender'];
+
+if (strcmp($gender, "other") == 0)
+  $gender = $_POST['gender_other'];
+
 $addDemo = $db->prepare('INSERT INTO demographics VALUES(:subjnum, :cond, :age, :gender, :race, :timetext)');
 
 $addDemo->execute(['subjnum' => $_SESSION['subjnum'], 'cond' => $_SESSION['cond'], 'age' => $_POST['age'],
-  'gender' => $_POST['gender'], 'race' => $_POST['race'], 'timetext' => $_SESSION['time']]);
+  'gender' => $gender, 'race' => $_POST['race'], 'timetext' => $_SESSION['time']]);
 
 // Get the total number of points lost by not buying insurance
 $getLosses = $db->prepare('SELECT subjnum, SUM(inspotloss) from results where subjnum=:subj AND insbought=0 AND insdroughthappen=1 GROUP BY subjnum');

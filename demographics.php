@@ -24,6 +24,8 @@ table.tblborder {border-spacing: 0px; vertical-align: center; text-align: center
 #preload {display: none;}
 </STYLE>
 
+<script src=\"https://code.jquery.com/jquery-3.6.0.min.js\" integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
+
 </head>
 
 
@@ -35,8 +37,10 @@ echo "<script type=\"text/javascript\" src=\"formcheck.js\"></script><br><br><b>
 	echo "You are nearly finished.  Please answer the remaining demographics questions below.<br><br>
 	";
 	echo "<form method='post' action='finished.php'>";
-	echo "Gender: <input type='radio' name='gender' value='m' />M ";
-	echo "<input type='radio' name='gender' value='f' />F";
+	echo "Gender: <input type='radio' name='gender' value='m' />Male ";
+	echo "<input type='radio' name='gender' value='f' />Female";
+	echo "<input type='radio' name='gender' value='prefer_not_to_say' />Prefer not to say";
+	echo "<input type='radio' name='gender' value='other' />Other: <input type='text' name='gender_other' />";
 	echo "<br /><br />Age: <input type='text' size='3' name='age' />";
 	echo "<br /><br />Race/Ethnicity: <input type='text' size='20' name='race' />";
 	echo "<br /><br /><input type='submit' onClick='valform(this.parentNode); return false;' value='Submit' />";
