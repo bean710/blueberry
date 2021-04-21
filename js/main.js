@@ -153,8 +153,8 @@ function initialize()
     insDatFull[j] = temp;
   }
 
-	// Add 4 null insurances for the 4 practice rounds
-	insDatFull.splice(0, 0, null, null, null, null);
+	// Add 4 null insurances for the 2 practice rounds
+	insDatFull.splice(0, 0, null, null);
 
 	console.log(insDatFull);
 
@@ -505,13 +505,13 @@ function nextLevel()
 
 	$("#next-btn").hide();
 
-	if(levelNumber == 3 && practicing) // if this is the fourth practice level
+	if(levelNumber == 1 && practicing) // if this is the fourth practice level
 	{
 		endPractice(); // end practice
 	}
 	else
 	{
-		if (levelNumber > 3 && insDatFull[levelNumber] && insDatFull[levelNumber].drought)
+		if (levelNumber > 1 && insDatFull[levelNumber] && insDatFull[levelNumber].drought)
 		{
 			if (levelBoughtIns)
 			{
