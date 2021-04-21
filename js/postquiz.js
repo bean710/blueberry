@@ -419,6 +419,7 @@ function opB() {
 }
 
 function part3() {
+  document.getElementById("big_question").style.display = "none";
   question.innerHTML = "In comparison to others, are you a person who is generally willing to give up something today in order to benefit from that in the future or are you not willing to do so? Please use a scale from 0 to 10, where a 0 means you are “completely unwilling to give up something today” and a 10 means you are “very willing to give up something today”.";
   part5_div.style.display = "block";
   opABut.style.display = "none";
