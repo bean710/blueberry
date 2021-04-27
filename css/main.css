@@ -35,10 +35,30 @@ body
 	text-align: center;
 }
 
+#game_info
+{
+	opacity: 50%;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 160px;
+	height: 80px;
+	background-color: #222222;
+	color: white;
+	border: solid 2px white;
+	font-size: 16px;
+	font-family: unmaskedBB;
+	padding: 2px;
+	text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
+}
+
 #insurance
 {
 	position: absolute;
-	top: 30px;
+	top: 10px;
 	left: 10px;
 	color: white;
 	border: solid 2px white;

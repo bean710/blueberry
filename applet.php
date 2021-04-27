@@ -53,6 +53,20 @@ echo "
 			<div id=\"buy_ins\">Buy</div>
 			<div id=\"ins_bought\">Insurance Bought</div>
 		</div>
+		<div id=\"game_info\">
+			<div id=\"level_berries\">
+				Level Berries: <span id=\"level_berries_val\">15</span>
+			</div>
+			<div id=\"total_berries\">
+				Total Berries: <span id=\"total_berries_val\">150</span>
+			</div>
+			<div id=\"level_points\">
+				Level Points: <span id=\"level_points_val\">0</span>
+			</div>
+			<div id=\"total_points\">
+				Total Points: <span id=\"total_points_val\">0</span>
+			</div>
+		</div>
 		<img src=\"img/bload.gif\" class=\"loading\">
 		<img id=\"practice\" src=\"img/practice.gif\" class=\"message\">
 		<img id=\"inc_shock_neg\" src=\"img/income_shock_negative.gif\" class=\"inc_message\">

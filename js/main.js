@@ -271,12 +271,19 @@ function initialize()
 		var ctx = render.canvas.getContext('2d'); // fetch the canvas
 
 		// Draw main UI of status text
+		/*
 		ctx.font = '22px unmaskedBB';
 		ctx.fillStyle = "black";
 		ctx.fillText('Level Berries: '	+ (berriesPerLevel - levelBerries),10, 20);
 		ctx.fillText('Total Berries: '	+ bankBerries, 180, 20);
 		ctx.fillText('Level Points: '	+ levelPoints, 370, 20);
 		ctx.fillText('Total Points: '	+ totalPoints, 520, 20);
+		*/
+
+		$("#level_berries_val").text(berriesPerLevel - levelBerries);
+		$("#total_berries_val").text(bankBerries);
+		$("#level_points_val").text(levelPoints);
+		$("#total_points_val").text(totalPoints);
 	});
 
 	// Add afterUpdate hook for mouse handling
