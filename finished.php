@@ -96,7 +96,7 @@ echo "Your field started with $startingNum pineapples, but you lost $losses pine
 
 $num=$_SESSION['subjnum']."000".rand(100,999);
 
-echo "<br><br>You have completed this game.  Your code is ABF" . $num . ". Please copy and paste this code back into mTurk. Please make sure you copy the complete code, as we will not be able to pay you the bonus in case part of it is missng. Thank you for participating. You may now exit this tab/window.<br><br>";
+echo "<br><br>You have completed this game.  Your code is ABF" . $num . ". Please copy and paste this code back into mTurk. Please make sure you copy the complete code, as we will not be able to pay you the bonus in case part of it is missing. Thank you for participating. You may now exit this tab/window.<br><br>";
 
 //TODO: UNCOMMENT THIS
 //session_destroy();
