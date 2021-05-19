@@ -46,7 +46,7 @@ body
 	background-color: #222222;
 	color: white;
 	border: solid 2px white;
-	font-size: 18px;
+	font-size: 20px;
 	font-family: unmaskedBB;
 	padding: 2px;
 	text-shadow: -1px 1px 0 #000,
@@ -63,17 +63,17 @@ body
 	left: 10px;
 	color: white;
 	border: solid 2px white;
-	font-size: 22px;
+	font-size: 20px;
 	background-color: #222222;
 	width: 160px;
-	height: 120px;
+	height: 100px;
 	font-family: unmaskedBB;
 	text-align: center;
 }
 
 #ins_info
 {
-	font-size: 20px;
+	font-size: 19px;
 	margin-left: 5px;
 	text-align: left;
 }
