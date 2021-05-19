@@ -42,11 +42,11 @@ body
 	top: 10px;
 	right: 10px;
 	width: 160px;
-	height: 80px;
+	height: 100px;
 	background-color: #222222;
 	color: white;
 	border: solid 2px white;
-	font-size: 16px;
+	font-size: 18px;
 	font-family: unmaskedBB;
 	padding: 2px;
 	text-shadow: -1px 1px 0 #000,
@@ -66,14 +66,14 @@ body
 	font-size: 22px;
 	background-color: #222222;
 	width: 160px;
-	height: 125px;
+	height: 120px;
 	font-family: unmaskedBB;
 	text-align: center;
 }
 
 #ins_info
 {
-	font-size: 16px;
+	font-size: 20px;
 	margin-left: 5px;
 	text-align: left;
 }
