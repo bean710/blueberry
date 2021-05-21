@@ -42,7 +42,6 @@ echo "
 	<div id=\"container\">
 		<div id=\"next-btn\">Next!</div>
 		<div id=\"insurance\">
-			Buy Insurance<br>
 			<div id=\"ins_info\">
 				Price: <span id=\"ins_price\"></span><br>
 				".
