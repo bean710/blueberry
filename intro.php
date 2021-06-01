@@ -18,6 +18,7 @@ tr.moused{background-color: #eeeeee;}
 td.tdbleft{border-left: 4px solid #000000;}
 td.tddash{background-color: #383838; padding: 5px; vertical-align: top; border-style: solid; border-width: 2px; border-color: #444444;}
 table.tblborder {border-spacing: 0px; vertical-align: center; text-align: center; border-width: 2px; border-style: solid; border-collapse: collapse; border-color: #aaaaaa; font-family: Verdana,sans-serif; font-size: 16pt;}
+center image { width: 100%; }
 
 #points, #round, #rleft, #tleft {font-size: 16pt; color: #ffffff;}
 #container {text-align: left; padding: 2px; border-style: solid; border-width: 8px; border-color: #000000; background-color: #ffffff; width: 800px; margin-left:auto; margin-right: auto; margin-top: 10px;}
