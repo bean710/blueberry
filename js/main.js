@@ -40,6 +40,7 @@ var bankBerries = initialBankBerries; // displayed as "Total Berries"
 var levelPoints = 0;
 var totalPoints = 0;
 var pointsLost = 0; // Due to insurance
+var nextLevelDeficit = 0;
 
 var levelNumber = 0;
 var practicing = true;
@@ -406,8 +407,15 @@ function initialize()
 				$("#ins_bought").show();
 				levelBoughtIns = true;
 				//levelBerries is the number of berries used
+				nextLevelDeficit = Math.max(levelBerries + thisInsPrice - berriesPerLevel, 0);
 				levelBerries = Math.min(levelBerries + thisInsPrice, berriesPerLevel);
 				bankBerries -= thisInsPrice;
+
+				if (levelBerries == berriesPerLevel)
+				{
+					Matter.World.remove(engine.world, currentBlueberry);
+					$("#next-btn").show();
+				}
 			}
 		}
 	})
@@ -572,7 +580,8 @@ function setupLevel()
 // Loads score values for current level
 function loadLevelScores()
 {
-	levelBerries = 0;
+	levelBerries = nextLevelDeficit;
+	nextLevelDeficit = 0;
 	levelPoints = 0;
 	levelBoughtIns = false;
 }
@@ -580,8 +589,8 @@ function loadLevelScores()
 // Returns a boolean indicating whether the user can fire a blueberry
 function canFireBlueberry()
 {
-	return (levelBerries < berriesPerLevel && bankBerries > 0) // if you haven't hit penalty and have shots left
-			|| (bankBerries > 0 && berryBankPenalty > -1); // if you can use the bank (penalty != -1) and there's a shot left in the bank
+	return (levelBerries < berriesPerLevel && bankBerries > 0); // if you haven't hit penalty and have shots left
+			//|| (bankBerries > 0 && berryBankPenalty > -1); // if you can use the bank (penalty != -1) and there's a shot left in the bank
 }
 
 // Called when you cannot fire another blueberry on the current level
@@ -792,7 +801,7 @@ function spawnObjects()
 		runningSimulation = false; // indicate we're done with runningSimulation = false
 
 		$(".message, .loading").hide(); // and hiding loading
-		
+
 		if (!practicing && levelNumber < insDatFull.length)
 			$("#insurance").show();
 		else
