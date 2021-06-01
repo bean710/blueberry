@@ -18,7 +18,7 @@ tr.moused{background-color: #eeeeee;}
 td.tdbleft{border-left: 4px solid #000000;}
 td.tddash{background-color: #383838; padding: 5px; vertical-align: top; border-style: solid; border-width: 2px; border-color: #444444;}
 table.tblborder {border-spacing: 0px; vertical-align: center; text-align: center; border-width: 2px; border-style: solid; border-collapse: collapse; border-color: #aaaaaa; font-family: Verdana,sans-serif; font-size: 16pt;}
-center image { width: 100%; }
+.gifImage { width: 50%; }
 
 #points, #round, #rleft, #tleft {font-size: 16pt; color: #ffffff;}
 #container {text-align: left; padding: 2px; border-style: solid; border-width: 8px; border-color: #000000; background-color: #ffffff; width: 800px; margin-left:auto; margin-right: auto; margin-top: 10px;}
@@ -73,7 +73,7 @@ echo "<div id=\"container\">";
         Please read the following <b>instructions</b> on how to play very <b>carefully</b>. Before you can play and earn pineapples, you will have to <b>answer three questions</b> about the game rules. For each question, if you don’t get it right on your first try, you will be directed back to the instructions and then you can try again. If you don’t get a question right the second time, you <b>cannot proceed to the game and your HIT will be rejected</b>.<br><br>
         <h3>This is how you play Angry Blueberries</h3>
         In this game, each pineapple that you harvest by hitting it with a blueberry is <b>worth $$cpp</b>, so your goal should be to <b>harvest as many pineapples as you can!</b> You will recieve a <b>bonus payment</b> according to the number of pineapples you harvest throughout the game.<br><br>
-        Below is a screenshot of the game: <br><br><center><img src=\"instructions.gif\"></center><br>
+        Below is a screenshot of the game: <br><br><center><img class=\"gifImage\" src=\"instructions.gif\"></center><br>
         On each level, there are <b>7 pineapples</b>. If you hit all 7 pineapples in a level, you earn <b>3 extra pineapples</b>. This means you can earn <b>up to 10 pineapples on each level</b>!<br><br>
         To load a blueberry, simply click the blueberry chute (the grey rectangle in the lower left of the screen). Once the blueberry is loaded into the slingshot, pull the blueberry back and aim. <b>Fire the blueberry by releasing it.</b> It's that simple. Watch out for obstacles in the level - if you hit the black holes, it'll be a wasted shot.<br><br>
         For now, your <b>total blueberry-budget</b> amounts to <b>$tot</b> blueberries. For each level, you will have <b>$per</b> blueberries that you can fire. Other participants were assigned a total blueberry-budget of <b>" . ($tot == 30 ? 150 : 30) . "</b> blueberries (i.e. <b>" . ($per == 3 ? 15 : 3) . "</b> per level). You might have more or less blueberries for the real experiment. We will inform you about any changes concerning your budget after the practice rounds. <br><br>
