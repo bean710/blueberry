@@ -413,7 +413,8 @@ function initialize()
 
 				if (levelBerries == berriesPerLevel)
 				{
-					Matter.World.remove(engine.world, currentBlueberry);
+					if (currentBlueberry != null)
+						Matter.World.remove(engine.world, currentBlueberry);
 					$("#next-btn").show();
 				}
 			}
@@ -580,7 +581,7 @@ function setupLevel()
 // Loads score values for current level
 function loadLevelScores()
 {
-	levelBerries = nextLevelDeficit;
+	levelBerries = nextLevelDeficit + Math.max(0, berriesPerLevel - bankBerries);
 	nextLevelDeficit = 0;
 	levelPoints = 0;
 	levelBoughtIns = false;
