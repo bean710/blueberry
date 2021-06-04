@@ -402,6 +402,7 @@ function opA() {
 
   curQuesKey = curQues.op1;
   //curQues = quizdat[curQues.op1];
+  document.getElementById("big_question_intro").style.display = "none";
   loadQuestion();
 }
 
@@ -415,6 +416,7 @@ function opB() {
 
   curQuesKey = curQues.op2;
   //curQues = quizdat[curQues.op2];
+  document.getElementById("big_question_intro").style.display = "none";
   loadQuestion();
 }
 
@@ -446,6 +448,7 @@ function part3_next() {
   part5_div.style.display = "none";
   opA_2But.style.display = "inline";
   opB_2But.style.display = "inline";
+  //document.getElementById("big_question").style.display = "inline";
   loadQuestion();
 }
 
@@ -459,6 +462,7 @@ function opA_2() {
 
   curQuesKey = curQues.op1;
   //curQues = quizdat2[curQues.op1];
+  document.getElementById("big_question_intro").style.display = "none";
   loadQuestion();
 }
 
@@ -472,6 +476,7 @@ function opB_2() {
 
   curQuesKey = curQues.op2;
   //curQues = quizdat2[curQues.op2];
+  document.getElementById("big_question").style.display = "none";
   loadQuestion();
 }
 
