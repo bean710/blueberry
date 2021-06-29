@@ -39,15 +39,20 @@ $addRes = $db->prepare('INSERT INTO results VALUES(:subjnum, :condnum, :levelnum
 $addPrac = $db->prepare('INSERT INTO practice VALUES(:subjnum, :condnum, :levelnum, :numofberries, :numofpoints, :pointsperbb,
 	:timeperbb, :errors, :insbought, :insprice, :insprob, :inspotloss, :insev, :insreasonable, :insdroughthappen)');
 
+$removeRes = $db->prepare('DELETE FROM results WHERE subjnum=:subjnum AND levelnum>=:levelnum');
+$removePrac = $db->prepare('DELETE FROM practice WHERE subjnum=:subjnum AND levelnum>=:levelnum');
+
 echo "store message recieved";
 
 if ($practice == 1) {
 	echo "entering into practice";
+	$removePrac->execute(['subjnum' => $subjnum, 'levelnum' => $count]);
 	$addPrac->execute(['subjnum' => $subjnum, 'condnum' => $cond, 'levelnum' => $count, 'numofberries' => $lberries,
 										'numofpoints' => $lpoints, 'pointsperbb' => $trace_str, 'timeperbb' => $tracetime_str, 'errors' => $traceerror_str,
 										'insbought' => $boughtins, 'insprice' => $insprice, 'insprob' => $insprob, 'inspotloss' => $insloss,
 										'insev' => $insev, 'insreasonable' => $insreasonable, 'insdroughthappen' => $insdrought]);
 } else {
+	$removeRes->execute(['subjnum' => $subjnum, 'levelnum' => $count]);
 	$addRes->execute(['subjnum' => $subjnum, 'condnum' => $cond, 'levelnum' => $count, 'numofberries' => $lberries,
 										'numofpoints' => $lpoints, 'pointsperbb' => $trace_str, 'timeperbb' => $tracetime_str, 'errors' => $traceerror_str,
 										'insbought' => $boughtins, 'insprice' => $insprice, 'insprob' => $insprob, 'inspotloss' => $insloss,
