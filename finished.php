@@ -41,10 +41,7 @@ $gender = $_POST['gender'];
 if (strcmp($gender, "other") == 0)
   $gender = $_POST['gender_other'];
 
-$addDemo = $db->prepare('INSERT INTO demographics VALUES(:subjnum, :cond, :age, :gender, :race, :timetext)');
-
-$addDemo->execute(['subjnum' => $_SESSION['subjnum'], 'cond' => $_SESSION['cond'], 'age' => $_POST['age'],
-  'gender' => $gender, 'race' => $_POST['race'], 'timetext' => $_SESSION['time']]);
+$addDemo = $db->prepare('INSERT INTO demographics VALUES(:subjnum, :cond, :age, :gender, :race, :timetext, :prize)');
 
 // Get the total number of points lost by not buying insurance
 $getLosses = $db->prepare('SELECT subjnum, SUM(inspotloss) from results where subjnum=:subj AND insbought=0 AND insdroughthappen=1 GROUP BY subjnum');
@@ -86,6 +83,10 @@ $startingNum = $getsett->fetch()[0];
 
 $grandTotal = $startingNum - $losses + $points;
 $totalWinnings = 0.02 * (int)$grandTotal;
+
+$addDemo->execute(['subjnum' => $_SESSION['subjnum'], 'cond' => $_SESSION['cond'], 'age' => $_POST['age'],
+  'gender' => $gender, 'race' => $_POST['race'], 'timetext' => $_SESSION['time'], 'prize' => $totalWinnings]);
+
 
 
 echo "<br>";
