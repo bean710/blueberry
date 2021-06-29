@@ -89,8 +89,7 @@ $totalWinnings = 0.02 * (int)$grandTotal;
 
 
 echo "<br>";
-echo "Your field started with $startingNum pineapples, but you lost $losses pineapples from uninsured disasters. <br>
-      Thankfully, you saved $savings pineapples thanks to the insurance you did buy. <br>
+echo "Your pineapple field started with $startingNum pineapples, but you lost $losses pineapples from uninsured disasters. <br>
       You also scored $points pineapples during the game. <br>
       This brings you to a grand total of $grandTotal pineapples, making your total winnings $$totalWinnings!";
 
