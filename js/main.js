@@ -739,7 +739,7 @@ function spawnObjects()
 		// Prevent blueberry from being draggable, and make it sleep
 		currentBlueberry.collisionFilter = { category: defaultFilterCategory, mask: defaultFilterCategory }; // reset collision filter so blueberry isn't draggable
 		currentBlueberry.sleepThreshold = 10;
-		currentBlueberry.render.visible = false;
+		currentBlueberry.render.visible = true;
 
 		// Setup random launch location
 		Matter.Body.setPosition(currentBlueberry, {x: randomRange(20, 90), y: randomRange(410, 480)});
@@ -755,7 +755,7 @@ function spawnObjects()
 			else {
 				console.log("Not killing berry");
 			}
-		}, 10000);
+		}, 15000);
 
 		if (debug)
 			console.log("Done simulate berry");
