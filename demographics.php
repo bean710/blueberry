@@ -42,7 +42,26 @@ echo "<script type=\"text/javascript\" src=\"formcheck.js\"></script><br><br><b>
 	echo "<input type='radio' name='gender' value='prefer_not_to_say' />Prefer not to say";
 	echo "<input type='radio' name='gender' value='other' />Other: <input type='text' name='gender_other' />";
 	echo "<br /><br />Age: <input type='text' size='3' name='age' />";
-	echo "<br /><br />Race/Ethnicity: <input type='text' size='20' name='race' />";
+  echo "<br /><br />Race/Ethnicity: <select name='race' id='race'>";
+  echo "<option value='white/caucasian'>White/Caucasian</option>";
+  echo "<option value='African American/Black'>African American/Black</option>";
+  echo "<option value='American Indian, Native American'>American Indian, Native American</option>";
+  echo "<option value='Alaska Native'>Alaska Native</option>";
+  echo "<option value='Native Hawaiian'>Native Hawaiian</option>";
+  echo "<option value='Guamanian'>Guamanian</option>";
+  echo "<option value='Samoan'>Samoan</option>";
+  echo "<option value='Other Pacific Islander'>Other Pacific Islander</option>";
+  echo "<option value='Asian Indian'>Asian Indian</option>";
+  echo "<option value='Chinese'>Chinese</option>";
+  echo "<option value='Filipino'>Filipino</option>";
+  echo "<option value='Japanese'>Japanese</option>";
+  echo "<option value='Korean'>Korean</option>";
+  echo "<option value='Vietnamese'>Vietnamese</option>";
+  echo "<option value='Other Asian'>Other Asian</option>";
+  echo "<option value='Refuse to answer'>Refuse to answer</option>";
+  echo "<option value='Don't Know'>Don't Know</option>";
+  echo "<option value='Other'>Other</option>";
+  echo "</select>";
 	echo "<br /><br /><input type='submit' onClick='valform(this.parentNode); return false;' value='Submit' />";
 	echo "</form>";
 
