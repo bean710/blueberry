@@ -425,6 +425,9 @@ function initialize()
 // Loads a blueberry into the slingshot and sets up elastic for it
 function loadSlingBlueberry(isSimulation)
 {
+	if (debug)
+		console.log("Loading sling berry");
+
 	if(canFireBlueberry() || isSimulation) // don't worry about having berries to fire if simulating
 	{
 		// Spawn blueberry and update elastic connection
@@ -516,6 +519,9 @@ function blueberryFired()
 // Handles logic for the next button and end of level transitioning
 function nextLevel()
 {
+	if (debug)
+	 console.log("nextLevel() sim:" + runningSimulation);
+
 	if(runningSimulation) // prevent next level working when loading
 		return;
 
@@ -724,7 +730,9 @@ function spawnObjects()
 		if(debug)
 			console.log("simulateBerry()");
 		if(!currentBlueberry) // if no berry atm, spawn one
+		{
 			loadSlingBlueberry(true);
+		}
 
 		hitGridObjects = []; // clear hit grid objects, since new berry simulation
 
@@ -737,6 +745,20 @@ function spawnObjects()
 		Matter.Body.setPosition(currentBlueberry, {x: randomRange(20, 90), y: randomRange(410, 480)});
 
 		Matter.Events.on(currentBlueberry, 'sleepStart', onBerrySimulateEnd);
+
+		setTimeout(() => {
+			if (runningSimulation && currentBlueberry != null)
+			{
+				console.log("KILLING BERRY");
+				Matter.Sleeping.set(currentBlueberry, true);
+			}
+			else {
+				console.log("Not killing berry");
+			}
+		}, 10000);
+
+		if (debug)
+			console.log("Done simulate berry");
 	}
 
 	// Called when the berry goes to sleep (stops moving)
@@ -958,6 +980,7 @@ function getDataParameters()
 	// Ex: 4 blueberries were shot. traceTimes = 250_300_100_2000. tracePoints = 2_3_0_2.
 	// This means the player took 250ms, 300ms, 100ms, and 2s to shoot the four blueberries. It also means the waffle hit 2, 3, 0, and 2 waffles on each shot (in order).
 
+	traceTimes[currentBlueberry.id] = new Date - traceTimes[currentBlueberry.id];
 
 	var tracePointsArr = [];
 	var traceTimesArr = [];
