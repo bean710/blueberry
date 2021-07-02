@@ -90,7 +90,7 @@ $addDemo->execute(['subjnum' => $_SESSION['subjnum'], 'cond' => $_SESSION['cond'
 
 
 echo "<br>";
-echo "Your pineapple field started with $startingNum pineapples, but you lost $losses pineapples from uninsured disasters. <br>
+echo "It's time to see how many pineapples you earned! <br>Your pineapple field started with $startingNum pineapples, but you lost $losses pineapples from uninsured disasters. <br>
       You also scored $points pineapples during the game. <br>
       This brings you to a grand total of $grandTotal pineapples, making your total winnings $$totalWinnings!";
 
