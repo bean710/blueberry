@@ -739,7 +739,7 @@ function spawnObjects()
 		// Prevent blueberry from being draggable, and make it sleep
 		currentBlueberry.collisionFilter = { category: defaultFilterCategory, mask: defaultFilterCategory }; // reset collision filter so blueberry isn't draggable
 		currentBlueberry.sleepThreshold = 10;
-		currentBlueberry.render.visible = true;
+		currentBlueberry.render.visible = false;
 
 		// Setup random launch location
 		Matter.Body.setPosition(currentBlueberry, {x: randomRange(20, 90), y: randomRange(410, 480)});
