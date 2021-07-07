@@ -69,7 +69,7 @@ echo "<div id=\"container\">";
       $tot=$per*10;
       $potpayout=$fieldpineapples*$cpp;
 
-      echo "Thank you for playing <b>Angry Blueberries!</b> This is a classic slingshot video game, played using only your mouse.<br><br>
+      echo "Thank you for playing <b>Angry Blueberries!</b> This is a classic slingshot video game, played using only your mouse. Your goal in this game is to harvest as many pineapples as possible by shooting at them with blueberries. The more pineapples you harvest, the higher your bonus payment.<br><br>
         Please read the following <b>instructions</b> on how to play very <b>carefully</b>. Before you can play and earn pineapples, you will have to <b>answer three questions</b> about the game rules. For each question, if you don’t get it right on your first try, you will be directed back to the instructions and then you can try again. If you don’t get a question right the second time, you <b>cannot proceed to the game and your HIT will be rejected</b>.<br><br>
         <h3>This is how you play Angry Blueberries</h3>
         In this game, each pineapple that you harvest by hitting it with a blueberry is <b>worth $$cpp</b>, so your goal should be to <b>harvest as many pineapples as you can!</b> You will receive a <b>bonus payment</b> according to the number of pineapples you harvest throughout the game.<br><br>
