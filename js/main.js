@@ -964,6 +964,10 @@ function sendStoreMessage(page)
 		{
 			if(debug)
 				console.log("Send store message success!");
+		},
+		error: function(error)
+		{
+			alert(error);
 		}
 	});
 
