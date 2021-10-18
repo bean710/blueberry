@@ -82,7 +82,7 @@ $startingNum = $getsett->fetch()[0];
 
 
 $grandTotal = $startingNum - $losses + $points;
-$totalWinnings = 0.02 * (int)$grandTotal;
+$totalWinnings = $_SESSION['cpp'] * (int)$grandTotal;
 
 $addDemo->execute(['subjnum' => $_SESSION['subjnum'], 'cond' => $_SESSION['cond'], 'age' => $_POST['age'],
   'gender' => $gender, 'race' => $_POST['race'], 'timetext' => $_SESSION['time'], 'prize' => $totalWinnings]);

@@ -37,7 +37,7 @@ echo "<div id=\"container\">";
 
 		include 'init.php';
 
-    $_SESSION['cpp'] = 0.02; // Cents per pineapple
+    $_SESSION['cpp'] = 0.01; // Cents per pineapple
 
 		$doneit=ipCheck();
     //TODO: Remove next line
