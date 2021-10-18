@@ -1,6 +1,6 @@
 var form = document.querySelector("form");
 var answerKey = {
-  question_a: "b",
+  question_a: "a",
   question_b: "c",
   question_c: "b"
 };
