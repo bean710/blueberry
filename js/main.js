@@ -984,7 +984,7 @@ function getDataParameters()
 	// Ex: 4 blueberries were shot. traceTimes = 250_300_100_2000. tracePoints = 2_3_0_2.
 	// This means the player took 250ms, 300ms, 100ms, and 2s to shoot the four blueberries. It also means the waffle hit 2, 3, 0, and 2 waffles on each shot (in order).
 
-	traceTimes[currentBlueberry.id] = new Date - traceTimes[currentBlueberry.id];
+	//traceTimes[currentBlueberry.id] = new Date - traceTimes[currentBlueberry.id];
 
 	var tracePointsArr = [];
 	var traceTimesArr = [];
