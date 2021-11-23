@@ -43,6 +43,7 @@ echo "<script type=\"text/javascript\" src=\"formcheck.js\"></script><br><br><b>
 	echo "<input type='radio' name='gender' value='other' />Other: <input type='text' name='gender_other' />";
 	echo "<br /><br />Age: <input type='text' size='3' name='age' />";
   echo "<br /><br />Race/Ethnicity: <select name='race' id='race'>";
+  echo "<option value='please select'>please select</option>";
   echo "<option value='white/caucasian'>White/Caucasian</option>";
   echo "<option value='African American/Black'>African American/Black</option>";
   echo "<option value='American Indian, Native American'>American Indian, Native American</option>";
