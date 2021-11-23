@@ -183,7 +183,7 @@ var quizdat = {
   },
 
   "7.1" : {
-    question: "Please consider the following: Would you rather receive 160 U.S. dollars today or 246 U.S. dollars in 12 months?",
+    question: "<b>Suppose you were given the choice between receiving a payment today or a payment in 12 months. We will now present to you 5 situations. The payment today is the same in each of these situations. The payment in 12 months is different in every situation. For each of these situations we would like to know which you would choose. Please assume there is no inflation, i.e. future prices are the same as today’s prices.</b> <br><br> Please consider the following: Would you rather receive 160 U.S. dollars today or 246 U.S. dollars in 12 months?",
     op1: "7.17",
     op2: "7.2"
   },
